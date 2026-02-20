@@ -3,6 +3,7 @@ import Cta from "./sections/Cta";
 import WhoWeAre from "./WhoWeAre";
 import Usmap from "./sections/Usmap";
 import Footer from "./sections/Footer";
+import Quote from "./sections/Quote";
 
 export default function Home() {
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Cta />
       <WhoWeAre />
       <Usmap />
+      <Quote />
       <Footer />
     </div>
   );
