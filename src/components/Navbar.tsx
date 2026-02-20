@@ -5,7 +5,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="w-full z-50 fixed" style={{ fontFamily: "'Outfit', sans-serif", height: "74px" }}>
+        <div className="w-full max-w-[1920px] z-50 fixed" style={{ fontFamily: "'Outfit', sans-serif", height: "74px" }}>
             {/* Desktop Navbar */}
             <div className="w-full relative hidden md:block" style={{ height: "74px" }}>
                 {/* Notch SVG Background — stretches to full width */}
