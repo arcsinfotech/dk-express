@@ -5,9 +5,9 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div style={{ fontFamily: "'Outfit', sans-serif" }}>
+        <div className="w-full sticky top-0 z-50" style={{ fontFamily: "'Outfit', sans-serif" }}>
             {/* Desktop Navbar */}
-            <div className="w-full sticky top-0 z-50 hidden md:block" style={{ height: "74px" }}>
+            <div className="w-full hidden md:block" style={{ height: "74px" }}>
                 {/* Notch SVG Background — stretches to full width */}
                 <svg
                     className="absolute inset-0 w-full h-full opacity-[0.6]"
@@ -72,7 +72,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Navbar */}
-            <div className="w-full sticky top-0 z-50 md:hidden">
+            <div className="w-full md:hidden">
                 {/* Solid dark header for mobile */}
                 <div
                     className="flex items-center justify-between px-4 h-[60px]"
