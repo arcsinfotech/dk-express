@@ -6,7 +6,7 @@ export default function Layout() {
     <div className="w-full max-w-[1920px] mx-auto h-dvh">
       <Navbar />
 
-      <main className="mt-[-74px] w-full h-full">
+      <main className="w-full h-full">
         <Outlet />
       </main>
     </div>
