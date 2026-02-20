@@ -174,8 +174,8 @@ export default function Footer() {
                 className="w-[55px] h-full flex items-center justify-center bg-[#E34545] rounded-r-[8px] cursor-pointer outline-none"
               >
                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.75 12.306H4.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13.6992 18.3456L19.7492 12.3061L13.6992 6.26562" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.75 12.306H4.75" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M13.6992 18.3456L19.7492 12.3061L13.6992 6.26562" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
             </div>
@@ -184,6 +184,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-4 mt-[23px] self-end" style={{ fontFamily: "'Poppins', sans-serif" }}>
               {socialLinks.map((link) => (
                 <a
+                  key={link.name}
                   href={link.href}
                   className="h-[38px] border border-[#999A9C] rounded-full flex items-center gap-1 px-3.5 py-2.5 text-[14px] font-medium text-white capitalize"
                 >
