@@ -103,7 +103,7 @@ export default function Cta() {
     },
   ];
   return (
-    <div className="w-full h-full flex items-center mt-8 justify-between">
+    <div className="w-full h-full flex items-center mt-8 justify-between overflow-hidden">
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
