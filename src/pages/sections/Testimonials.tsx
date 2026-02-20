@@ -113,14 +113,14 @@ export default function Testimonials() {
 
 
     return (
-        <div className="w-full h-[832px] flex flex-col gap-3 items-center justify-center">
+        <div className="w-full h-[832px] flex flex-col gap-3 items-center justify-start pt-[120px]">
             <div className="font-normal text-[18px] text-[#545454]" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 Testimonials
             </div>
             <div className="text-[54px] font-semibold" style={{ fontFamily: "'Raleway', sans-serif" }}>
                 What <span className="text-[#E64949]">People</span> Say
             </div>
-            <div className="w-full h-[340px] flex gap-4 px-4">
+            <div className="w-full h-[340px] flex gap-4 px-4 mt-[48px]">
                 {testimonials.map((testimonial) => (
                     <TestimonialCard key={testimonial.name} testimonial={testimonial} />
                 ))}
