@@ -150,7 +150,7 @@ export default function Cta() {
           {ctaCards.map((card, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center justify-between bg-[#F4F3FA] w-[302px] h-[432px] rounded-[26px] pb-11 relative cursor-pointer"
+              className="group flex flex-col items-center justify-between bg-[#F4F3FA] w-[302px] h-[432px] rounded-[26px] pb-11 relative cursor-pointer overflow-hidden"
             >
               <div className="flex justify-between w-full items-start p-4">
                 <div className="text-[#E8E6F5] text-5xl font-semibold">
@@ -181,7 +181,10 @@ export default function Cta() {
                   </div>
                 </div>
               </div>
-              <div className="flex gap-1.5 items-center absolute right-0 pr-2.5 pt-3 text-black group-hover:text-[#E64949] transition-colors duration-500 overflow-hidden">
+              <div
+                className="flex gap-1.5 items-center absolute right-0 pr-2.5 pt-3 text-black group-hover:text-[#E64949] transition-colors duration-500 overflow-hidden"
+                style={{ fontFamily: "Figtree" }}
+              >
                 <span className="text-lg leading-[22px]">Track now</span>
 
                 <div className="relative w-4 h-4 overflow-hidden">
