@@ -1,6 +1,7 @@
 import Hero from "./sections/Hero";
 import Cta from "./sections/Cta";
 import WhoWeAre from "./WhoWeAre";
+import Usmap from "./sections/Usmap";
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Cta />
       <WhoWeAre />
+      <Usmap />
     </div>
   );
 }
