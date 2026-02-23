@@ -1,27 +1,31 @@
 import { ArrowRight } from "lucide-react";
+import ServiceTransport from "@/assets/images/service-transport.png";
+import ServiceDryVan from "@/assets/images/service-dry-van.png";
+import ServiceCrossDock from "@/assets/images/service-cross-dock.png";
+import ServiceStorage from "@/assets/images/service-storage.png";
 
 export default function OurServices() {
   const serviceCards = [
     {
-      image: "/src/assets/images/service-transport.png",
+      image: ServiceTransport,
       title: "Refrigerated Transport",
       description:
         "53' food-grade reefers with Thermo King 600 series. Certified USFTP for temperature-sensitive cargo.",
     },
     {
-      image: "/src/assets/images/service-dry-van.png",
+      image: ServiceDryVan,
       title: "Dry Van",
       description:
         "Reliable dry freight for construction materials, beverages, paper goods, and more across 12+ states.",
     },
     {
-      image: "/src/assets/images/service-cross-dock.png",
+      image: ServiceCrossDock,
       title: "Cross Dock",
       description:
         "Single-source logistics solution for efficient freight consolidation and distribution.",
     },
     {
-      image: "/src/assets/images/service-storage.png",
+      image: ServiceStorage,
       title: "Storage & Re-Delivery",
       description:
         "Short-term storage solutions at our Stockton, CA facility with flexible re-delivery scheduling.",

@@ -1,23 +1,27 @@
 import HeroSlideShow from "@/components/HeroSlideShow";
+import Partner1 from "@/assets/images/partner1.png";
+import Partner2 from "@/assets/images/partner2.png";
+import Partner3 from "@/assets/images/partner3.png";
+import Partner4 from "@/assets/images/partner4.png";
 
 export default function Hero() {
 
 const partners = [
     {
         name: "Partner 1",
-        icon: <img src="/src/assets/images/partner1.png" alt="Partner 1" className="w-auto h-7" />
+        icon: <img src={Partner1} alt="Partner 1" className="w-auto h-7" />
     },
     {
         name: "Partner 2",
-        icon: <img src="/src/assets/images/partner2.png" alt="Partner 2" className="w-auto h-7" />
+        icon: <img src={Partner2} alt="Partner 2" className="w-auto h-7" />
     },
     {
         name: "Partner 3",
-        icon: <img src="/src/assets/images/partner3.png" alt="Partner 3" className="w-auto h-7" />
+        icon: <img src={Partner3} alt="Partner 3" className="w-auto h-7" />
     },
     {
         name: "Partner 4",
-        icon: <img src="/src/assets/images/partner4.png" alt="Partner 4" className="w-auto h-7" />
+        icon: <img src={Partner4} alt="Partner 4" className="w-auto h-7" />
     }
     ]
 
