@@ -30,7 +30,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/dkexpress/",
       icon: (
         <svg
           width="16"
@@ -49,7 +49,7 @@ export default function Footer() {
     },
     {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/dkexpresscargoinc/",
       icon: (
         <svg
           width="16"
@@ -68,7 +68,7 @@ export default function Footer() {
     },
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/company/dk-express-cargo-inc.",
       icon: (
         <svg
           width="16"
@@ -131,8 +131,8 @@ export default function Footer() {
         </defs>
       </svg>
       <div className="relative z-10">
-        <div className="mx-[135px] ">
-          <div className="flex items-start mb-[60px] pt-[100px] gap-0 ">
+        <div className="mx-[135px]">
+          <div className="flex items-start mb-[60px] pt-[100px] gap-0">
             {/* Logo + Description + Social Buttons */}
             <div className="flex flex-col gap-8 max-w-[400px] shrink-0">
               <div className="flex flex-col gap-5">
@@ -152,6 +152,7 @@ export default function Footer() {
                   <a
                     key={link.name}
                     href={link.href}
+                    target="_blank"
                     className={`relative overflow-hidden h-[38px] rounded-full flex items-center gap-1 px-3.5 py-2.5 text-[14px] font-medium capitalize text-white transition-colors duration-300 before:absolute before:inset-0 before:border before:border-[#999A9C] before:rounded-full before:transition-transform before:duration-500 before:origin-right hover:before:translate-x-full after:absolute after:bottom-[6px] after:left-[14px] after:right-[14px] after:h-[1.5px] after:opacity-0 after:transition-opacity after:duration-0 hover:after:delay-100 hover:after:opacity-100 ${link.hoverColor}`}
                   >
                     <span>{link.icon}</span>
@@ -186,7 +187,7 @@ export default function Footer() {
                 Contact Info
               </div>
               <ul className="flex flex-col gap-4">
-                <li className="flex items-start gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap">
+                <li className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]">
                   <svg
                     className="w-4 h-4 mt-0.5 shrink-0 text-gray-400"
                     fill="currentColor"
@@ -200,7 +201,7 @@ export default function Footer() {
                   </svg>
                   200 West Center Way, Stockton, CA
                 </li>
-                <li className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap">
+                <li className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]">
                   <svg
                     className="w-4 h-4 shrink-0 text-gray-400"
                     fill="currentColor"
@@ -210,7 +211,7 @@ export default function Footer() {
                   </svg>
                   209-954-9354
                 </li>
-                <li className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap">
+                <li className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]">
                   <svg
                     className="w-4 h-4 shrink-0 text-gray-400"
                     fill="currentColor"
@@ -221,7 +222,7 @@ export default function Footer() {
                   </svg>
                   Dispatch@Dkexpress.Net
                 </li>
-                <li className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap">
+                <li className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]">
                   <svg
                     className="w-4 h-4 shrink-0 text-gray-400"
                     fill="currentColor"
