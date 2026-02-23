@@ -113,7 +113,7 @@ export default function Testimonials() {
 
 
     return (
-        <div className="w-full h-[832px] flex flex-col gap-3 items-center justify-start pt-[120px]">
+        <div className="w-full h-[832px] flex flex-col gap-3 items-center justify-start pt-[120px] bg-[#F2F2F2]">
             <div className="font-normal text-[18px] text-[#545454]" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 Testimonials
             </div>
