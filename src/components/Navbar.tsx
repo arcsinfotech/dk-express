@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Logo from "@/assets/Logo.png";
+import Logo from "./Logo";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -35,11 +35,7 @@ export default function Navbar() {
                 <div className="relative z-10 flex items-center justify-between h-full px-10 pl-14">
                     {/* Logo */}
                     <div className="shrink-0">
-                        <img
-                            src={Logo}
-                            alt="logo"
-                            className="w-[80px] object-contain"
-                        />
+                        <Logo width={90} height={52} />
                     </div>
 
                     {/* Nav Links */}
