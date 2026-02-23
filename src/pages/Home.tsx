@@ -6,6 +6,7 @@ import Footer from "./sections/Footer";
 import Quote from "./sections/Quote";
 import OurServices from "./sections/OurServices";
 import Testimonials from "./sections/Testimonials";
+import OurAdvantage from "./sections/OurAdvantage";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <WhoWeAre />
       <OurServices />
       <Usmap />
+      <OurAdvantage />
       <Testimonials />
       <Quote />
       <Footer />

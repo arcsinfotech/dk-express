@@ -53,9 +53,9 @@ export default function OurServices() {
           {serviceCards.map((card, index) => (
             <div
               key={index}
-              className="bg-[#FFFFFF] rounded-[26px] p-2 flex flex-col gap-4 overflow-hidden"
+              className="bg-[#FFFFFF] rounded-[26px] p-2 flex flex-col gap-4 overflow-hidden h-[544px] w-[391px]"
             >
-              <div className="overflow-hidden rounded-[20px] group/outer cursor-pointer">
+              <div className="overflow-hidden rounded-[20px] group/outer cursor-pointer h-[366px] w-[375px] bg-gray-100">
                 <img
                   src={card.image}
                   alt={card.title}

@@ -9,7 +9,6 @@ export default function Cta() {
       title: "Shippers",
       description:
         "Stay informed at every step and ensure your cargo arrives on schedule.",
-      image: CtaImage,
       iconSvg: (
         <svg
           width="32"
@@ -33,8 +32,6 @@ export default function Cta() {
       title: "Carriers",
       description:
         "Access shipment updates, routes, and performance insights all in one place.",
-      image: CtaImage,
-      icon: CtaImage,
       iconSvg: (
         <svg
           width="28"
@@ -83,7 +80,6 @@ export default function Cta() {
       title: "Careers",
       description:
         "Explore opportunities that let you grow, innovate, and make an impact.",
-      image: CtaImage,
       iconSvg: (
         <svg
           width="32"
