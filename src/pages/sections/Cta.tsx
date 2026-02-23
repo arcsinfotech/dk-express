@@ -1,13 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 
+import CtaImage from "@/assets/images/cta.png";
+
 export default function Cta() {
   const ctaCards = [
     {
       title: "Shippers",
       description:
         "Stay informed at every step and ensure your cargo arrives on schedule.",
-      image: "/src/assets/images/cta.png",
+      image: CtaImage,
       iconSvg: (
         <svg
           width="32"
@@ -31,8 +33,8 @@ export default function Cta() {
       title: "Carriers",
       description:
         "Access shipment updates, routes, and performance insights all in one place.",
-      image: "/src/assets/images/cta.png",
-      icon: "/src/assets/images/cta.png",
+      image: CtaImage,
+      icon: CtaImage,
       iconSvg: (
         <svg
           width="28"
@@ -81,7 +83,7 @@ export default function Cta() {
       title: "Careers",
       description:
         "Explore opportunities that let you grow, innovate, and make an impact.",
-      image: "/src/assets/images/cta.png",
+      image: CtaImage,
       iconSvg: (
         <svg
           width="32"
@@ -129,7 +131,7 @@ export default function Cta() {
           </div>
           <div>
             <img
-              src="/src/assets/images/cta.png"
+              src={CtaImage}
               alt="CTA Image"
               className="w-full h-[285px] object-fit"
             />

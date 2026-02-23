@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Logo from "@/assets/Logo.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <div className="shrink-0">
                         <img
-                            src="/src/assets/Logo.png"
+                            src={Logo}
                             alt="logo"
                             className="w-[80px] object-contain"
                         />

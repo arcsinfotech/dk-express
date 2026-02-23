@@ -1,6 +1,12 @@
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import Truck1 from "@/assets/images/truck1.png";
+import Truck2 from "@/assets/images/truck2.png";
+import Truck3 from "@/assets/images/truck3.png";
+import Truck4 from "@/assets/images/truck4.png";
+
+const Truck = [Truck1, Truck2, Truck3, Truck4];
 
 export default function HeroSlideShow() {
   const autoplay = useRef(
@@ -18,7 +24,7 @@ export default function HeroSlideShow() {
               <CarouselItem key={index} className="h-full basis-full flex items-stretch">
                 <div className="w-full h-full">
                     <img
-                      src={`/src/assets/images/truck${index + 1}.png`}
+                      src={Truck[index]}
                       alt="Hero Slide Show"
                       className="w-full h-full object-cover rounded-[16px]"
                     />
