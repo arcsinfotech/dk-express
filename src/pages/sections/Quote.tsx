@@ -1,3 +1,5 @@
+import QuoteImage from "@/assets/quote.png";
+
 export default function Quote() {
     return (
         <div className="w-full h-[298px] bg-white flex items-center justify-between">
@@ -13,7 +15,7 @@ export default function Quote() {
                 </button>
             </div>
             <div className="flex items-center justify-center h-full">
-                <img src="/src/assets/quote.png" alt="Quote" className="w-full h-auto object-cover" />
+                <img src={QuoteImage} alt="Quote" className="w-full h-auto object-cover" />
             </div>
         </div>
     )
