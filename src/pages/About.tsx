@@ -48,8 +48,8 @@ export default function About() {
         <section className="py-24 bg-[#EEF2F5]">
           <div className="container mx-auto px-4">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-              <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-3">Leadership</p>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Our Team</h2>
+              <p className="text-[#b51222] font-heading font-semibold text-sm uppercase tracking-widest mb-3">Leadership</p>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#1b2232]">Our Team</h2>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {leaders.map((leader, i) => (
@@ -76,8 +76,8 @@ export default function About() {
         <section className="py-24 bg-[#F7F9FB]">
           <div className="container mx-auto px-4 max-w-3xl">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-              <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-3">Our Journey</p>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Company Timeline</h2>
+              <p className="text-[#b51222] font-heading font-semibold text-sm uppercase tracking-widest mb-3">Our Journey</p>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#1b2232]">Company Timeline</h2>
             </motion.div>
             <div className="relative">
               <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#DCE3EA]" />

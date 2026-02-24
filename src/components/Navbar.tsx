@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "./Logo";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+    const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
-
     return (
         <div className="w-full max-w-[1920px] z-50 fixed" style={{ fontFamily: "'Outfit', sans-serif", height: "74px" }}>
             {/* Desktop Navbar */}
@@ -61,6 +62,7 @@ export default function Navbar() {
                     <div>
                         <button
                             className="border border-white rounded-full px-5 py-2 bg-transparent text-white text-sm font-semibold tracking-wide hover:bg-white hover:text-black transition-all duration-200 whitespace-nowrap cursor-pointer"
+                            onClick={() => navigate("/contact")}
                         >
                             Contact Us
                         </button>
