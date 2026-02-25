@@ -132,7 +132,7 @@ export default function Footer() {
       </svg>
       <div className="relative z-10">
         <div className="mx-[135px]">
-          <div className="flex items-start mb-[60px] pt-[100px] gap-0">
+          <div className="flex items-start justify-between mb-[60px] pt-[100px] gap-0">
             {/* Logo + Description + Social Buttons */}
             <div className="flex flex-col gap-8 max-w-[400px] shrink-0">
               <div className="flex flex-col gap-5">
@@ -163,7 +163,7 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div className="flex flex-col gap-[54px] ml-[92px]">
+            <div className="flex flex-col gap-[54px]">
               <div className="text-[24px] font-medium text-white whitespace-nowrap">
                 Quick Links
               </div>
@@ -182,7 +182,7 @@ export default function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div className="flex flex-col gap-[54px] ml-[92px]">
+            <div className="flex flex-col gap-[54px]">
               <div className="text-[24px] font-medium text-white whitespace-nowrap">
                 Contact Info
               </div>
@@ -199,7 +199,7 @@ export default function Footer() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  2000 West Charter Way, Stockton, CA 95206
+                  2000 West Charter Way, <br /> Stockton, CA 95206
                 </li>
                 <a
                   href="tel:209-954-9354"
@@ -246,7 +246,7 @@ export default function Footer() {
             </div>
 
             {/* Location map */}
-            <div className="flex flex-col gap-[45px] ml-[24px]">
+            <div className="flex flex-col gap-[45px]">
               <div className="text-[24px] font-medium text-white whitespace-nowrap">
                 Location
               </div>
