@@ -18,11 +18,11 @@ const CommonSubHeader = ({
         <div className="flex flex-col gap-3 justify-center items-center ">
           <div
             className="bg-[#FFFFFF14] text-white px-4 py-2 rounded-[36px] text-lg leading-[22px] tracking-normal"
-            style={{ fontFamily: "Outfit" }}
+            style={{ fontFamily: "'Outfit', sans-serif" }}
           >
             {heading}
           </div>
-          <div className="flex gap-4 text-[92px] leading-[102px] tracking-normal font-medium">
+          <div className="flex gap-4 text-[92px] leading-[102px] tracking-normal font-medium" style={{ fontFamily: "'Raleway', sans-serif" }}>
             <span className="text-white">{subHeading}</span>
             <span className="text-[#E64949] font-black">
               {secondSubHeading}
@@ -31,7 +31,7 @@ const CommonSubHeader = ({
         </div>
         <div
           className="text-lg leading-[22px] tracking-normal text-white max-w-[505px] text-center"
-          style={{ fontFamily: "Figtree" }}
+          style={{ fontFamily: "'Figtree', sans-serif" }}
         >
           {description}
         </div>

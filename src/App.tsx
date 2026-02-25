@@ -51,8 +51,8 @@ function App() {
             element={
               <CommonSubHeader
                 heading="Join Our Team"
-                subHeading="Partner With DK"
-                secondSubHeading="Express"
+                subHeading="Partner With"
+                secondSubHeading="DK Express"
                 description="Discover opportunities for carriers, owner-operators, and drivers."
               />
             }
