@@ -10,10 +10,12 @@ import Opportunities from "./pages/Opportunities";
 import Customers from "./pages/Customers";
 import Contact from "./pages/Contact";
 import CommonSubHeader from "./components/CommonSubHeader";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Toaster />
       <Routes>
         <Route path="/" element={<Layout />}>
