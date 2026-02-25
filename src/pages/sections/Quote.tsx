@@ -1,18 +1,22 @@
 import QuoteImage from "@/assets/quote.png";
+import { useNavigate } from "react-router-dom";
 
 type QuoteProps = {
   title?: string;
   title2?: string;
   description?: string;
   buttonText?: string;
+  path? : string;
 };
 
 export default function Quote({
   title = "Need Reliable",
   title2 = "Transportation?", 
   description = "Get a quote today and experience the DK Express difference.", 
-  buttonText = "Get Quote"
+  buttonText = "Get Quote",
+  path = "/customers"
 }: QuoteProps) {
+  const navigate = useNavigate();
   return (
     <div className="w-full h-[298px] bg-white flex items-center justify-between relative overflow-hidden">
       <div className="w-fit h-full pl-[135px] pt-[65px] bg-transparent">
@@ -23,12 +27,15 @@ export default function Quote({
           {title} <span className="text-[#E64949]">{title2}</span>
         </div>
         <div
-          className="text-[#444444] text-[18px] font-medium mb-[26px]"
+          className="text-[#444444] text-[18px] font-medium mb-[26px] capitalize"
           style={{ fontFamily: "'Raleway', sans-serif" }}
         >
           {description}
         </div>
-        <button className="h-[48px] px-4 border border-[#E64949] text-[#E64949] rounded-full">
+        <button 
+          className="h-[48px] px-4 border border-[#E64949] text-[#E64949] rounded-full"
+          onClick={() => {navigate(path)}}
+        >
           {buttonText}
         </button>
       </div>

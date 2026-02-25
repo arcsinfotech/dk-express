@@ -130,7 +130,13 @@ const Opportunities = () => {
       </div>
 
 
-      <Quote title="Ready To" title2="Get Started?" description="Contact us today to learn more about partnership opportunities." buttonText="Become a Partner" />
+      <Quote 
+        title="Ready To" 
+        title2="Get Started?" 
+        description="Contact us today to learn more about partnership opportunities." 
+        buttonText="Become a Partner" 
+        path="/contact"
+      />
       <Footer />
     </div>
   );
