@@ -106,7 +106,7 @@ const Services = () => {
       <div className="w-full h-full flex items-start gap-4 px-[135px]">
         
         <div className="sticky top-[10%]">
-          <div className="relative overflow-hidden min-w-[678px] h-[536px] rounded-[26px] px-[25px] py-[30px] mt-[120px]" style={{ background: "linear-gradient(169.27deg, #E64949 30.45%, #681F1F 92.04%)"}}>
+          <div className="relative overflow-hidden min-w-[678px] h-[536px] rounded-[26px] px-[25px] py-[30px] my-[120px]" style={{ background: "linear-gradient(169.27deg, #E64949 30.45%, #681F1F 92.04%)"}}>
             <div className="absolute top-[280px] p-[102px] left-[220px] w-[627px] h-[627px] rounded-full bg-[#C73232] blur-2xl">
               <div className="w-[423px] h-[423px] bg-[#AE2222] rounded-full blur-[20px]"></div>
             </div>
