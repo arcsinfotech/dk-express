@@ -103,19 +103,23 @@ const Services = () => {
     <div className="min-h-screen">
       
       {/* services */}
-      <div className="w-full h-[776px] flex items-center gap-4 px-[135px]">
-        <div className="relative overflow-hidden min-w-[678px] h-[536px] rounded-[26px] px-[25px] py-[30px]" style={{ background: "linear-gradient(169.27deg, #E64949 30.45%, #681F1F 92.04%)"}}>
-          <div className="absolute top-[280px] p-[102px] left-[220px] w-[627px] h-[627px] rounded-full bg-[#C73232] blur-2xl">
-            <div className="w-[423px] h-[423px] bg-[#AE2222] rounded-full blur-[20px]"></div>
-          </div>
-          <div className="font-semibold text-[54px] leading-[58px] text-white mb-[16px]" style={{ fontFamily: "Raleway" }}>
-            Reliable Freight & Logistics Services
-          </div>
-          <div className="text-[16px] capitalize text-white font-normal" style={{ fontFamily: "Figtree" }}>
-            We deliver reliable, efficient logistics from refrigerated transport to cross-docking, ensuring your freight arrives safely and on time.
+      <div className="w-full h-full flex items-start gap-4 px-[135px]">
+        
+        <div className="sticky top-[10%]">
+          <div className="relative overflow-hidden min-w-[678px] h-[536px] rounded-[26px] px-[25px] py-[30px] mt-[120px]" style={{ background: "linear-gradient(169.27deg, #E64949 30.45%, #681F1F 92.04%)"}}>
+            <div className="absolute top-[280px] p-[102px] left-[220px] w-[627px] h-[627px] rounded-full bg-[#C73232] blur-2xl">
+              <div className="w-[423px] h-[423px] bg-[#AE2222] rounded-full blur-[20px]"></div>
+            </div>
+            <div className="font-semibold text-[54px] leading-[58px] text-white mb-[16px]" style={{ fontFamily: "Raleway" }}>
+              Reliable Freight & Logistics Services
+            </div>
+            <div className="text-[16px] capitalize text-white font-normal" style={{ fontFamily: "Figtree" }}>
+              We deliver reliable, efficient logistics from refrigerated transport to cross-docking, ensuring your freight arrives safely and on time.
+            </div>
           </div>
         </div>
-        <div className="no-scrollbar flex flex-col gap-4 h-full overflow-scroll w-full py-[120px]">
+
+        <div className="no-scrollbar flex flex-col gap-4 h-full w-full py-[120px]">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
