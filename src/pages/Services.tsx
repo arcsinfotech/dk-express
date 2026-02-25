@@ -1,17 +1,23 @@
 import { motion } from "framer-motion";
 import {
-  Snowflake,
-  Package,
   Warehouse,
   Users,
   RefreshCw,
-  Truck,
 } from "lucide-react";
+
+import DryVan from "@/assets/dry_van.svg";
+import CoolVan from "@/assets/cool_van.svg";
+import FastVan from "@/assets/fast_van.svg";
+import Team from "@/assets/team.svg";
+import CrossDock from "@/assets/cross_dock.svg";
+
+import Quote from "./sections/Quote";
 import Footer from "./sections/Footer";
+import { useEffect, useRef, useState } from "react";
 
 const services = [
   {
-    icon: Snowflake,
+    icon: <img src={CoolVan} alt="Refrigerated Transport" width={32} height={32} />,
     title: "Refrigerated Transport",
     details: [
       "53' food-grade reefers",
@@ -23,7 +29,7 @@ const services = [
     ],
   },
   {
-    icon: Package,
+    icon: <img src={DryVan} alt="Dry Van" width={32} height={32} />,
     title: "Dry Van",
     details: [
       "53' standard dry vans",
@@ -35,7 +41,7 @@ const services = [
     ],
   },
   {
-    icon: Warehouse,
+    icon: <img src={FastVan} alt="Storage & Re-Delivery" width={32} height={32} />,
     title: "Storage & Re-Delivery",
     details: [
       "Stockton, CA warehouse facility",
@@ -47,7 +53,7 @@ const services = [
     ],
   },
   {
-    icon: Users,
+    icon: <img src={Team} alt="Team Driving" width={32} height={32} />,
     title: "Team Driving",
     details: [
       "Non-stop delivery for time-sensitive freight",
@@ -59,7 +65,7 @@ const services = [
     ],
   },
   {
-    icon: RefreshCw,
+    icon: <img src={CrossDock} alt="Cross Dock" width={32} height={32} />,
     title: "Cross Dock",
     details: [
       "Single-source logistics solution",
@@ -72,72 +78,103 @@ const services = [
   },
 ];
 
+function ServiceCard({ icon, title, details }: { icon: React.ReactNode, title: string, details: string[] }) {
+  return (
+    <div className="p-[26px]">
+      <div className="w-[58px] h-[58px] bg-[#E64949] rounded-full flex items-center justify-center mb-4">
+        {icon}
+      </div>
+      
+      <div className="text-[24px] font-semibold capitalize mb-[40px]" style={{ fontFamily: "Raleway" }}>
+        {title}
+      </div>
+
+      {/* Bullet Points */}
+      <div className="grid grid-cols-2 gap-x-10 gap-y-4">
+        {details.map((item, index) => (
+          <div key={index} className="flex items-start gap-2">
+            <span className="mt-[6px] w-[6px] h-[6px] bg-[#545454] rounded-full shrink-0"></span>
+            <span className="text-[16px] text-[#545454]" style={{ fontFamily: "Figtree" }}>
+              {item}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const Services = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const [lockScroll, setLockScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+
+      // When section hits top
+      if (rect.top <= 0 && rect.bottom > window.innerHeight) {
+        setLockScroll(true);
+        document.body.style.overflow = "hidden";
+      } else {
+        setLockScroll(false);
+        document.body.style.overflow = "auto";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const handleInnerScroll = () => {
+      if (!lockScroll) return;
+
+      const isAtBottom =
+        container.scrollTop + container.clientHeight >=
+        container.scrollHeight - 5;
+
+      if (isAtBottom) {
+        document.body.style.overflow = "auto";
+        setLockScroll(false);
+      }
+    };
+
+    container.addEventListener("scroll", handleInnerScroll);
+    return () => container.removeEventListener("scroll", handleInnerScroll);
+  }, [lockScroll]);
+
   return (
     <div className="min-h-screen">
-      <main>
-        {/* Hero */}
-        <section className="bg-[linear-gradient(135deg,hsl(220_90%_15%)_0%,hsl(220_85%_25%)_100%)] pt-32 pb-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <p className="text-[#b51222] font-semibold text-sm uppercase tracking-widest mb-3" style={{fontFamily: "Montserrat"}}>
-                What We Offer
-              </p>
-              <h1 className="text-4xl md:text-5xl font-black text-white mb-6" style={{fontFamily: "Montserrat"}}>
-                Our Services
-              </h1>
-              <p className="text-white/70 text-lg">
-                Comprehensive transportation solutions tailored to your freight
-                needs.
-              </p>
-            </motion.div>
+      
+      {/* services */}
+      <div ref={sectionRef} className="w-full h-[776px] flex items-center gap-4 px-[135px]">
+        <div className="relative overflow-hidden min-w-[678px] h-[536px] rounded-[26px] px-[25px] py-[30px]" style={{ background: "linear-gradient(169.27deg, #E64949 30.45%, #681F1F 92.04%)"}}>
+          <div className="absolute top-[280px] p-[102px] left-[220px] w-[627px] h-[627px] rounded-full bg-[#C73232] blur-2xl">
+            <div className="w-[423px] h-[423px] bg-[#AE2222] rounded-full blur-[20px]"></div>
           </div>
-        </section>
+          <div className="font-semibold text-[54px] leading-[58px] text-white mb-[16px]" style={{ fontFamily: "Raleway" }}>
+            Reliable Freight & Logistics Services
+          </div>
+          <div className="text-[16px] capitalize text-white font-normal" style={{ fontFamily: "Figtree" }}>
+            We deliver reliable, efficient logistics from refrigerated transport to cross-docking, ensuring your freight arrives safely and on time.
+          </div>
+        </div>
+        <div ref={scrollRef} className="flex flex-col gap-4 h-full overflow-scroll w-full py-[120px]">
+        {services.map((service, index) => (
+          <ServiceCard key={index} {...service} />
+        ))}
+        </div>
+      </div>
 
-        {/* Services */}
-        <section className="py-24 bg-[#f9fafb]">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="space-y-8">
-              {services.map((service, i) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-white rounded-lg p-8 md:p-10 shadow-md border border-[#d9dfe8]"
-                >
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="w-16 h-16 rounded-lg bg-[#0c3992]/10 flex items-center justify-center shrink-0">
-                      <service.icon className="w-8 h-8 text-[#0c3992]" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-[#1b2232] mb-4" style={{fontFamily: "Montserrat"}}>
-                        {service.title}
-                      </h3>
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {service.details.map((detail) => (
-                          <li
-                            key={detail}
-                            className="flex items-center gap-2 text-sm text-[#627084]"
-                          >
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#b51222] shrink-0" />
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
+      <Quote />
       <Footer />
     </div>
   );
