@@ -60,7 +60,7 @@ export default function About() {
               xmlns="http://www.w3.org/2000/svg"
               className="absolute top-[-155px] left-[-55px] z-0"
             >
-              <g clip-path="url(#clip0_372_2625)">
+              <g clipPath="url(#clip0_372_2625)">
                 <path
                   d="M18 0L0 28H21L22.5 62L39.5 33V0H18Z"
                   fill="#E64949"

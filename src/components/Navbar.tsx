@@ -51,7 +51,7 @@ export default function Navbar() {
                             <Link
                                 key={label}
                                 to={to}
-                                className="text-[#D0D0D0] text-[16px] font-normal tracking-wide hover:text-red-400 transition-colors duration-200 whitespace-nowrap"
+                                className={`text-[#D0D0D0] text-[16px] font-normal tracking-wide hover:text-red-400 transition-colors duration-200 whitespace-nowrap ${to === window.location.pathname ? "text-[#E64949]" : ""}`}
                             >
                                 {label}
                             </Link>

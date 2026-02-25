@@ -1,9 +1,3 @@
-import { motion } from "framer-motion";
-import {
-  Warehouse,
-  Users,
-  RefreshCw,
-} from "lucide-react";
 
 import DryVan from "@/assets/dry_van.svg";
 import CoolVan from "@/assets/cool_van.svg";
@@ -13,7 +7,6 @@ import CrossDock from "@/assets/cross_dock.svg";
 
 import Quote from "./sections/Quote";
 import Footer from "./sections/Footer";
-import { useEffect, useRef, useState } from "react";
 
 const services = [
   {
@@ -105,57 +98,12 @@ function ServiceCard({ icon, title, details }: { icon: React.ReactNode, title: s
 }
 
 const Services = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const [lockScroll, setLockScroll] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const rect = sectionRef.current.getBoundingClientRect();
-
-      // When section hits top
-      if (rect.top <= 0 && rect.bottom > window.innerHeight) {
-        setLockScroll(true);
-        document.body.style.overflow = "hidden";
-      } else {
-        setLockScroll(false);
-        document.body.style.overflow = "auto";
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    const handleInnerScroll = () => {
-      if (!lockScroll) return;
-
-      const isAtBottom =
-        container.scrollTop + container.clientHeight >=
-        container.scrollHeight - 5;
-
-      if (isAtBottom) {
-        document.body.style.overflow = "auto";
-        setLockScroll(false);
-      }
-    };
-
-    container.addEventListener("scroll", handleInnerScroll);
-    return () => container.removeEventListener("scroll", handleInnerScroll);
-  }, [lockScroll]);
 
   return (
     <div className="min-h-screen">
       
       {/* services */}
-      <div ref={sectionRef} className="w-full h-[776px] flex items-center gap-4 px-[135px]">
+      <div className="w-full h-[776px] flex items-center gap-4 px-[135px]">
         <div className="relative overflow-hidden min-w-[678px] h-[536px] rounded-[26px] px-[25px] py-[30px]" style={{ background: "linear-gradient(169.27deg, #E64949 30.45%, #681F1F 92.04%)"}}>
           <div className="absolute top-[280px] p-[102px] left-[220px] w-[627px] h-[627px] rounded-full bg-[#C73232] blur-2xl">
             <div className="w-[423px] h-[423px] bg-[#AE2222] rounded-full blur-[20px]"></div>
@@ -167,7 +115,7 @@ const Services = () => {
             We deliver reliable, efficient logistics from refrigerated transport to cross-docking, ensuring your freight arrives safely and on time.
           </div>
         </div>
-        <div ref={scrollRef} className="flex flex-col gap-4 h-full overflow-scroll w-full py-[120px]">
+        <div className="no-scrollbar flex flex-col gap-4 h-full overflow-scroll w-full py-[120px]">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
