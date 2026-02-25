@@ -1,9 +1,3 @@
-import { motion } from "framer-motion";
-import {
-  Warehouse,
-  Users,
-  RefreshCw,
-} from "lucide-react";
 
 import DryVan from "@/assets/dry_van.svg";
 import CoolVan from "@/assets/cool_van.svg";
@@ -167,7 +161,7 @@ const Services = () => {
             We deliver reliable, efficient logistics from refrigerated transport to cross-docking, ensuring your freight arrives safely and on time.
           </div>
         </div>
-        <div ref={scrollRef} className="flex flex-col gap-4 h-full overflow-scroll w-full py-[120px]">
+        <div ref={scrollRef} className="no-scrollbar flex flex-col gap-4 h-full overflow-scroll w-full py-[120px]">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
