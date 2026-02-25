@@ -23,16 +23,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <main>
-        {/* Hero */}
-        <section className="bg-[linear-gradient(135deg,hsl(220_90%_15%)_0%,hsl(220_85%_25%)_100%)] pt-32 pb-20">
-          <div className="container mx-auto px-4">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
-              <p className="text-[#b51222] font-heading font-semibold text-sm uppercase tracking-widest mb-3">Get In Touch</p>
-              <h1 className="text-4xl md:text-5xl font-heading font-black text-white mb-6">Connect With Our Logistics Experts</h1>
-              <p className="text-white/70 text-lg">We're here to help with all your transportation needs.</p>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Contact Section */}
         <section className="py-24 bg-[#f9fafb]">

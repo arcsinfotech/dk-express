@@ -79,6 +79,7 @@ function App() {
                 heading="Get In Touch"
                 subHeading="Connect With Our"
                 secondSubHeading="Logistics Experts"
+                breakLine={true}
                 description="We are here to help with all your transportation needs."
               />
             }
