@@ -37,10 +37,10 @@ function App() {
             path="/services"
             element={
               <CommonSubHeader
-                heading="Services"
+                heading="What We Offer"
                 subHeading="Our"
                 secondSubHeading="Services"
-                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+                description="Comprehensive transportation solutions tailored to your freight needs."
               />
             }
           >
@@ -50,10 +50,10 @@ function App() {
             path="/opportunities"
             element={
               <CommonSubHeader
-                heading="Opportunities"
-                subHeading="Our"
-                secondSubHeading="Opportunities"
-                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+                heading="Join Our Team"
+                subHeading="Partner With DK"
+                secondSubHeading="Express"
+                description="Discover opportunities for carriers, owner-operators, and drivers."
               />
             }
           >
@@ -63,10 +63,10 @@ function App() {
             path="/customers"
             element={
               <CommonSubHeader
-                heading="Customers"
-                subHeading="Our"
-                secondSubHeading="Customers"
-                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+                heading="Get Started"
+                subHeading="Request a"
+                secondSubHeading="Quote"
+                description="Fill out the form below and our team will provide a competitive quote."
               />
             }
           >
@@ -76,10 +76,10 @@ function App() {
             path="/contact"
             element={
               <CommonSubHeader
-                heading="Contact"
-                subHeading="Our"
-                secondSubHeading="Contact"
-                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+                heading="Get In Touch"
+                subHeading="Connect With Our"
+                secondSubHeading="Logistics Experts"
+                description="We are here to help with all your transportation needs."
               />
             }
           >
