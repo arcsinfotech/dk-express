@@ -1,0 +1,46 @@
+import { motion } from "motion/react";
+import { Outlet } from "react-router-dom";
+
+const CommonSubHeader = ({
+  heading,
+  subHeading,
+  secondSubHeading,
+  description,
+}: {
+  heading: string;
+  subHeading: string;
+  secondSubHeading: string;
+  description: string;
+}) => {
+  return (
+    <div>
+      <div className="bg-[#00112D] bg-[radial-gradient(154.75%_154.13%_at_73.7%_-37.3%,#E64949_13.28%,#00112D_65.5%)]  flex flex-col gap-4 justify-center items-center h-full py-[209px]">
+        <div className="flex flex-col gap-3 justify-center items-center ">
+          <div
+            className="bg-[#FFFFFF14] text-white px-4 py-2 rounded-[36px] text-lg leading-[22px] tracking-normal"
+            style={{ fontFamily: "Outfit" }}
+          >
+            {heading}
+          </div>
+          <div className="flex gap-4 text-[92px] leading-[102px] tracking-normal font-medium">
+            <span className="text-white">{subHeading}</span>
+            <span className="text-[#E64949] font-black">
+              {secondSubHeading}
+            </span>
+          </div>
+        </div>
+        <div
+          className="text-lg leading-[22px] tracking-normal text-white max-w-[505px] text-center"
+          style={{ fontFamily: "Figtree" }}
+        >
+          {description}
+        </div>
+      </div>
+      <div className="w-full h-full">
+        <Outlet />
+      </div>
+    </div>
+  );
+};
+
+export default CommonSubHeader;

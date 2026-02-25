@@ -9,6 +9,7 @@ import { Toaster } from "./components/ui/sonner";
 import Opportunities from "./pages/Opportunities";
 import Customers from "./pages/Customers";
 import Contact from "./pages/Contact";
+import CommonSubHeader from "./components/CommonSubHeader";
 
 function App() {
   return (
@@ -17,11 +18,71 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/opportunities" element={<Opportunities />} />
-          <Route path="/customers" element={<Customers />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/about"
+            element={
+              <CommonSubHeader
+                heading="About Us"
+                subHeading="Our"
+                secondSubHeading="Story"
+                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+              />
+            }
+          >
+            <Route index element={<About />} />
+          </Route>
+          <Route
+            path="/services"
+            element={
+              <CommonSubHeader
+                heading="Services"
+                subHeading="Our"
+                secondSubHeading="Services"
+                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+              />
+            }
+          >
+            <Route index element={<Services />} />
+          </Route>
+          <Route
+            path="/opportunities"
+            element={
+              <CommonSubHeader
+                heading="Opportunities"
+                subHeading="Our"
+                secondSubHeading="Opportunities"
+                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+              />
+            }
+          >
+            <Route index element={<Opportunities />} />
+          </Route>
+          <Route
+            path="/customers"
+            element={
+              <CommonSubHeader
+                heading="Customers"
+                subHeading="Our"
+                secondSubHeading="Customers"
+                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+              />
+            }
+          >
+            <Route index element={<Customers />} />
+          </Route>
+          <Route
+            path="/contact"
+            element={
+              <CommonSubHeader
+                heading="Contact"
+                subHeading="Our"
+                secondSubHeading="Contact"
+                description="Family-owned since 1997, delivering excellence in transportation across the nation."
+              />
+            }
+          >
+            <Route index element={<Contact />} />
+          </Route>
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

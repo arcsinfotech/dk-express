@@ -201,7 +201,10 @@ export default function Footer() {
                   </svg>
                   2000 West Charter Way, Stockton, CA 95206
                 </li>
-                <a href="tel:209-954-9354"className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]">
+                <a
+                  href="tel:209-954-9354"
+                  className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]"
+                >
                   <svg
                     className="w-4 h-4 shrink-0 text-gray-400"
                     fill="currentColor"
@@ -211,7 +214,10 @@ export default function Footer() {
                   </svg>
                   209-954-9354
                 </a>
-                <a href="mailto:dispatch@dkexpress.net" className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]">
+                <a
+                  href="mailto:dispatch@dkexpress.net"
+                  className="flex items-center gap-3 text-[18px] text-[#989898] font-medium whitespace-nowrap leading-[24px]"
+                >
                   <svg
                     className="w-4 h-4 shrink-0 text-gray-400"
                     fill="currentColor"
