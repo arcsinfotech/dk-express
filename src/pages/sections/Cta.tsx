@@ -102,7 +102,7 @@ export default function Cta() {
     },
   ];
   return (
-    <div className="w-full h-full flex max-[768px]:flex-col items-center max-[768px]:items-start mt-8 max-[768px]:my-[60px] justify-between max-[768px]:h-fit overflow-hidden max-[768px]:overflow-visible">
+    <div className="w-full h-full flex max-[768px]:flex-col items-center max-[768px]:items-start mt-8 max-[768px]:my-[60px] justify-between max-[768px]:h-fit overflow-hidden">
       <motion.div
         initial={ isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}

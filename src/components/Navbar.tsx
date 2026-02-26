@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "./Logo";
 import { useNavigate } from "react-router-dom";
+import MobileNotch from "@/assets/mobile_notch.svg";
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -71,18 +72,17 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Navbar */}
-            <div className="w-full md:hidden">
+            <div className="w-full md:hidden" style={{ height: "58px" }}>
+                
+                <img src={MobileNotch} alt="mobile notch" className="absolute w-full h-[58px] object-cover" />
+
                 {/* Solid dark header for mobile */}
                 <div
-                    className="flex items-center justify-between px-4 h-[60px]"
-                    style={{
-                        background: "linear-gradient(90deg, #1a1a1a 0%, #3a0000 50%, #1a1a1a 100%)",
-                    }}
-                >
+                    className="flex items-center justify-between px-4 h-full relative z-10">
                     <img
                         src="/src/assets/Logo.png"
                         alt="logo"
-                        className="w-[70px] object-contain"
+                        className="w-[68px] object-contain"
                     />
                     <button
                         onClick={() => setMenuOpen(!menuOpen)}
