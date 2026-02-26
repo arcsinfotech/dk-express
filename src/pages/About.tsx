@@ -42,10 +42,12 @@ export default function About() {
   return (
     <div>
       <div className="bg-[#F2F2F2] flex justify-center items-center w-full">
-        <div className="relative flex justify-between items-center bg-[#FFFFFF] rounded-[26px] w-full gap-[38px] mx-[135px] my-[120px] p-[12px] z-10 overflow-hidden">
-          <div className="bg-[#E64949] rounded-full absolute w-[168px] h-[168px] top-[-44px] left-[-38px] blur-[120px] z-0" />
-          <div className="bg-[#E64949] rounded-full absolute w-[168px] h-[168px] top-[344px] left-[376px] blur-[120px] z-0" />
-          <div className="bg-[#E64949] rounded-full absolute w-[168px] h-[168px] top-[-52px] left-[714px] blur-[120px] z-0" />
+        <div className="relative flex max-[768px]:flex-col justify-between items-center bg-[#FFFFFF] rounded-[26px] w-full gap-[38px] max-[768px]:gap-[36px] mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] p-[12px] z-10 overflow-hidden">
+          <div className="bg-[#E64949] max-[768px]:hidden rounded-full absolute w-[168px] h-[168px] top-[-44px] left-[-38px] blur-[120px] z-0" />
+          <div className="bg-[#E64949] max-[768px]:hidden rounded-full absolute w-[168px] h-[168px] top-[344px] left-[376px] blur-[120px] z-0" />
+          <div className="bg-[#E64949] max-[768px]:hidden rounded-full absolute w-[168px] h-[168px] top-[-52px] left-[714px] blur-[120px] z-0" />
+          <div className="bg-[#E64949] max-[768px]:block hidden rounded-full absolute w-[120px] h-[120px] top-[47px] left-[283px] blur-[60px] z-0" />
+          <div className="bg-[#ffffff] max-[768px]:block hidden rounded-full absolute w-[449px] h-[449px] top-[42px] left-[-108px] blur-[120px] z-0" />
           <div
             // initial={{ opacity: 0, x: -40 }}
             // whileInView={{ opacity: 1, x: 0 }}
@@ -53,7 +55,7 @@ export default function About() {
             // transition={{ duration: 1.5 }}
             className="h-full relative z-20"
           >
-            <div className="w-[805px] h-[409px] bg-gray-200 rounded-[16px]">
+            <div className="w-[805px] h-[409px] max-[768px]:w-[319px] max-[768px]:h-[162px] bg-gray-200 rounded-[16px]">
               <img src={aboutTruck} alt="" />
             </div>
           </div>
@@ -62,7 +64,7 @@ export default function About() {
             // whileInView={{ opacity: 1, x: 0 }}
             // viewport={{ once: true }}
             // transition={{ duration: 1.5 }}
-            className="h-full flex flex-col gap-4 relative justify-center items-center w-[774px] z-20"
+            className="h-full flex flex-col gap-4 relative justify-center items-center w-full max-w-[774px] z-20"
           >
             <svg
               width="774"
@@ -500,23 +502,23 @@ export default function About() {
                 </clipPath>
               </defs>
             </svg>
-            <div className="bg-white rounded-full absolute w-[693px] h-[693px] top-[-141px] left-[-115px] z-2 blur-[120px]" />
-            <div className="relative z-10 w-[499px]">
+            <div className="bg-white rounded-full absolute max-w-[693px] h-[693px] top-[-141px] left-[-115px] z-2 blur-[120px]" />
+            <div className="relative z-10 max-w-[499px]">
               <div className="flex gap-2">
                 <span
-                  className="text-[54px] font-semibold text-[#262626] leading-[58px]"
+                  className="text-[54px] max-[768px]:text-[32px] font-semibold text-[#262626] leading-[58px] max-[768px]:leading-[38px]"
                   style={{ fontFamily: "Raleway" }}
                 >
                   Our
                 </span>
                 <span
-                  className="text-[54px] font-semibold text-[#E64949] leading-[58px]"
+                  className="text-[54px] max-[768px]:text-[32px] font-semibold text-[#E64949] leading-[58px] max-[768px]:leading-[38px]"
                   style={{ fontFamily: "Raleway" }}
                 >
                   Mission
                 </span>
               </div>
-              <div className="text-[#444444] leading-[22px] tracking-normal">
+              <div className="text-[#444444] text-[16px] max-[768px]:text-[14px] leading-[22px] max-[768px]:leading-[20px] tracking-normal">
                 To provide reliable, safe, and efficient transportation services
                 while maintaining the highest standards of integrity and
                 customer satisfaction. We are committed to being the most
@@ -528,9 +530,9 @@ export default function About() {
       </div>
 
       <div className="bg-white relative z-10">
-        <div className="bg-[#00112D] rounded-full absolute w-[236px] h-[236px] top-[89px] left-[1066px] z-0 blur-[220px]" />
-        <div className="bg-[#00112D] rounded-full absolute w-[236px] h-[236px] top-[460px] left-[1506px] z-0 blur-[220px]" />
-        <div className="bg-[#00112D] rounded-full absolute w-[236px] h-[236px] left-[-235px] top-[16px] z-0 blur-[220px]" />
+        <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[89px] left-[1066px] z-0 blur-[220px]" />
+        <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[460px] left-[1506px] z-0 blur-[220px]" />
+        <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] left-[-235px] top-[16px] z-0 blur-[220px]" />
         <svg
           width="1920"
           height="673"
@@ -545,23 +547,23 @@ export default function About() {
             strokeWidth="40"
           />
         </svg>
-        <div className="relative z-10 mx-[135px] my-[120px] flex gap-[139px]">
+        <div className="relative z-10 mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] flex max-[768px]:flex-col gap-[139px] max-[768px]:gap-[16px]">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="flex flex-col gap-[26px] relative z-20"
+            className="flex flex-col gap-[26px] max-[768px]:gap-[14px] relative z-20"
           >
             <div
-              className="text-[56px] leading-[58px] font-semibold tracking-normal flex gap-3"
+              className="text-[56px] max-[768px]:text-[32px] leading-[58px] max-[768px]:leading-[38px] font-semibold tracking-normal flex gap-3"
               style={{ fontFamily: "Raleway" }}
             >
               <span className="text-[#262626]">About</span>
               <span className="text-[#E64949]">DK Express</span>
             </div>
             <div
-              className="text-[18px] leading-[22px] tracking-normal text-[#545454]"
+              className="text-[18px] max-[768px]:text-[14px] leading-[22px] max-[768px]:leading-[20px] tracking-normal text-[#545454]"
               style={{ fontFamily: "Raleway" }}
             >
               DK Express is a family-owned and operated transportation company
@@ -571,17 +573,19 @@ export default function About() {
             </div>
             <div className="flex flex-col gap-4">
               <div className="relative overflow-hidden rounded-[26px]">
-                <div className="bg-[#00112D] rounded-full absolute w-[236px] h-[236px] top-[-184px] left-[781px] z-10 blur-[220px]" />
-                <div className="bg-[#B60001] rounded-full absolute w-[236px] h-[236px] top-[135px] left-[-193px] z-10 blur-[220px]" />
+                <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[-184px] left-[781px] z-10 blur-[220px]" />
+                <div className="bg-[#B60001] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[135px] left-[-193px] z-10 blur-[220px]" />
+                <div className="bg-[#00112D] max-[768px]:block hidden rounded-full absolute w-[100px] h-[100px] top-[45px] left-[276px] z-10 blur-[90px]" />
+                <div className="bg-[#B60001] max-[768px]:block hidden rounded-full absolute w-[100px] h-[100px] top-[145px] left-[-58px] z-10 blur-[90px]" />
                 <div className="relative flex flex-col gap-[12px] bg-white p-[26px] ">
                   <div
-                    className="text-[20px] leading-[26px] font-semibold text-[#262626]"
+                    className="text-[20px] max-[768px]:text-[18px] leading-[26px] max-[768px]:leading-[24px] font-semibold text-[#262626]"
                     style={{ fontFamily: "Raleway" }}
                   >
                     Refrigerated or Dry, We’ve Got You Covered
                   </div>
                   <div
-                    className="text-lg leading-[22px] text-[#545454]"
+                    className="text-lg max-[768px]:text-[14px] leading-[22px] max-[768px]:leading-[20px] text-[#545454]"
                     style={{ fontFamily: "Figtree" }}
                   >
                     We specialize in both refrigerated and dry freight,
@@ -594,17 +598,19 @@ export default function About() {
                 </div>
               </div>
               <div className="relative overflow-hidden rounded-[26px]">
-                <div className="bg-[#00112D] rounded-full absolute w-[236px] h-[236px] top-[-184px] left-[781px] z-10 blur-[220px]" />
-                <div className="bg-[#B60001] rounded-full absolute w-[236px] h-[236px] top-[135px] left-[-193px] z-10 blur-[220px]" />
+                <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[-184px] left-[781px] z-10 blur-[220px]" />
+                <div className="bg-[#B60001] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[135px] left-[-193px] z-10 blur-[220px]" />
+                <div className="bg-[#00112D] max-[768px]:block hidden rounded-full absolute w-[100px] h-[100px] top-[45px] left-[276px] z-10 blur-[90px]" />
+                <div className="bg-[#B60001] max-[768px]:block hidden rounded-full absolute w-[100px] h-[100px] top-[145px] left-[-58px] z-10 blur-[90px]" />
                 <div className="relative flex flex-col gap-[12px] bg-white p-[26px] ">
                   <div
-                    className="text-[20px] leading-[26px] font-semibold text-[#262626]"
+                    className="text-[20px] max-[768px]:text-[18px] leading-[26px] max-[768px]:leading-[24px] font-semibold text-[#262626]"
                     style={{ fontFamily: "Raleway" }}
                   >
                     Where Service Meets Commitment
                   </div>
                   <div
-                    className="text-lg leading-[22px] text-[#545454]"
+                    className="text-lg max-[768px]:text-[14px] leading-[22px] max-[768px]:leading-[20px] text-[#545454]"
                     style={{ fontFamily: "Figtree" }}
                   >
                     At DK Express, we believe in treating every customer like
@@ -623,7 +629,7 @@ export default function About() {
             transition={{ duration: 1.5 }}
             className="bg-[#FFFFFF] rounded-[26px] p-3"
           >
-            <div className="w-[654px] h-[638px]">
+            <div className="w-[654px] h-[638px] max-[768px]:w-full max-[768px]:h-full">
               <img src={aboutTruck2} alt="" />
             </div>
           </motion.div>
