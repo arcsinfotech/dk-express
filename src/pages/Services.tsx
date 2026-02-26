@@ -107,11 +107,11 @@ function ServiceCard({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_377_3220)">
+          <g clipPath="url(#clip0_377_3220)">
             <path
               d="M64.9062 36.0312L76.9987 48.1237C77.6568 48.6995 78.5781 50.1967 76.9987 51.5787C75.4193 52.9607 68.279 60.0516 64.9062 63.4244"
               stroke="#E0DDDD"
-              stroke-linecap="round"
+              strokeLinecap="round"
             />
             <rect
               x="49.5414"
@@ -125,7 +125,7 @@ function ServiceCard({
             <path
               d="M32.5781 50.3438H65.8941"
               stroke="#E0DDDD"
-              stroke-linecap="round"
+              strokeLinecap="round"
             />
           </g>
           <defs>

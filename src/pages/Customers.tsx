@@ -84,16 +84,16 @@ const Customers = () => {
 
   return (
     <div className="relative z-10">
-      <div className="absolute top-[554px] left-[1499px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[80px] z-0" />
-      <div className="absolute top-[25px] left-[200px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[80px] z-0" />
-      <div className="absolute top-[81px] left-[1436px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[80px] z-0" />
-      <div className="absolute top-[560px] left-[761px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[80px] z-0" />
+      <div className="absolute top-[554px] left-[1499px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
+      <div className="absolute top-[25px] left-[200px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
+      <div className="absolute top-[81px] left-[1436px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
+      <div className="absolute top-[560px] left-[761px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
       <div className="mx-[135px] my-[120px] flex gap-[40px] bg-white rounded-[26px] relative z-10 p-3">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
+          className="relative z-20"
         >
           <div className="relative w-[705px] h-[730px] p-[36px] rounded-[16px] bg-[#01112D] overflow-hidden">
             <div className="w-[494px] h-[494px] rounded-full absolute blur-[80px] top-[-247px] left-[-242px] bg-[#001E50]" />
@@ -130,8 +130,7 @@ const Customers = () => {
 
         <motion.div
           initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
           className="w-full m-2.5"
         >
