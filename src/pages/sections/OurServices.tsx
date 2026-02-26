@@ -34,9 +34,9 @@ export default function OurServices() {
     },
   ];
   return (
-    <div className="flex flex-col px-[60px] max-[768px]:px-[20px] pt-[60px] max-[768px]:py-[60px]">
+    <div className="flex flex-col px-[60px] max-[768px]:px-0 pt-[60px] max-[768px]:pt-0 max-[768px]:pb-[60px]">
       
-      <div className="bg-[#F2F2F2] rounded-[26px] px-[75px] max-[768px]:p-0 py-[60px] flex flex-col gap-[60px] max-[768px]:gap-[46px]">
+      <div className="bg-[#F2F2F2] rounded-[26px] px-[75px] max-[768px]:p-0 py-[60px] flex flex-col gap-[60px] max-[768px]:gap-[46px] max-[768px]:py-[60px] max-[768px]:px-[20px] max-[768px]:rounded-none">
         <div className="flex flex-col items-center gap-2">
           <div
             className="text-lg max-[768px]:text-[12px] leading-[22px] tracking-normal bg-[#0000000A] rounded-[36px] py-2 px-4 max-[768px]:py-0 text-center w-fit text-[#545454]"
