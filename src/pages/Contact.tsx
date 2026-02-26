@@ -1,8 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import Footer from "./sections/Footer";
@@ -11,14 +7,33 @@ import Quote from "./sections/Quote";
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      toast.success("Message Sent! We'll respond within 1 business day.");
-      setIsSubmitting(false);
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const data = Object.fromEntries(formData.entries());
+    console.log("data: ", data);
+
+    formData.append(
+      "access_key",
+      import.meta.env.VITE_CONTACT_US_FORM_ACCESS_KEY,
+    );
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const response_data = await response.json();
+    if (response.ok) {
+      toast.success("Message Sent! We will get back to you soon.");
+    } else {
+      toast.error(response_data.message || "Something went wrong.");
+    }
+    setIsSubmitting(false);
+    form.reset();
   };
 
   return (
@@ -226,92 +241,112 @@ const Contact = () => {
               >
                 Send Us a Message
               </div>
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-row gap-[11px] w-full">
-                  <div className="flex flex-col gap-3 w-1/2">
-                    <label
-                      htmlFor="company-name"
-                      className="text-sm leading-[16px] tracking-normal"
-                      style={{ fontFamily: "Figtree" }}
-                    >
-                      Company Name
-                    </label>
-                    <input
-                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
-                      type="text"
-                      id="company-name"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-3 w-1/2">
-                    <label
-                      htmlFor="email"
-                      className="text-sm leading-[16px] tracking-normal"
-                      style={{ fontFamily: "Figtree" }}
-                    >
-                      Email
-                    </label>
-                    <input
-                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
-                      type="text"
-                      id="email"
-                      placeholder="Your email"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-3 w-full">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm leading-[16px] tracking-normal"
-                    style={{ fontFamily: "Figtree" }}
-                  >
-                    Phone
-                  </label>
-                  <input
-                    className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
-                    type="text"
-                    id="phone"
-                    placeholder="Your phone number"
-                  />
-                </div>
-                <div className="flex flex-col gap-3 w-full">
-                  <label
-                    htmlFor="subject"
-                    className="text-sm leading-[16px] tracking-normal"
-                    style={{ fontFamily: "Figtree" }}
-                  >
-                    Subject
-                  </label>
-                  <input
-                    className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
-                    type="text"
-                    id="subject"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div className="flex flex-col gap-3 col-span-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm leading-[16px] tracking-normal"
-                    style={{ fontFamily: "Figtree" }}
-                  >
-                    Message
-                  </label>
-
-                  <textarea
-                    id="message"
-                    placeholder="Message"
-                    rows={5}
-                    className="w-full min-h-[120px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454] max-h-[180px]"
-                  />
-                </div>
-              </div>
-              <button
-                className="px-4 w-fit py-3.5 bg-[#E64949] text-white text-base leading-[14px] font-medium rounded-[36px]"
-                style={{ fontFamily: "Outfit" }}
+              <form
+                className="flex flex-col gap-[26px]"
+                onSubmit={handleSubmit}
               >
-                Send Message
-              </button>
+                <div className="flex flex-col gap-6">
+                  <div className="flex flex-row gap-[11px] w-full">
+                    <div className="flex flex-col gap-3 w-1/2">
+                      <label
+                        htmlFor="company-name"
+                        className="text-sm leading-[16px] tracking-normal"
+                        style={{ fontFamily: "Figtree" }}
+                      >
+                        Company Name
+                      </label>
+                      <input
+                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
+                        type="text"
+                        id="companyname"
+                        name="Company Name"
+                        placeholder="Your company name"
+                        required
+                      />
+                    </div>
+                    <div className="flex flex-col gap-3 w-1/2">
+                      <label
+                        htmlFor="email"
+                        className="text-sm leading-[16px] tracking-normal"
+                        style={{ fontFamily: "Figtree" }}
+                      >
+                        Email
+                      </label>
+                      <input
+                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
+                        type="email"
+                        id="email"
+                        name="Email"
+                        placeholder="Your email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-3 w-full">
+                    <label
+                      htmlFor="phone"
+                      className="text-sm leading-[16px] tracking-normal"
+                      style={{ fontFamily: "Figtree" }}
+                    >
+                      Phone
+                    </label>
+                    <input
+                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
+                      type="number"
+                      id="phone"
+                      name="Phone"
+                      placeholder="Your phone number"
+                      required
+                    />
+                  </div>
+                  <div className="flex flex-col gap-3 w-full">
+                    <label
+                      htmlFor="subject"
+                      className="text-sm leading-[16px] tracking-normal"
+                      style={{ fontFamily: "Figtree" }}
+                    >
+                      Subject
+                    </label>
+                    <input
+                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454]"
+                      type="text"
+                      id="subject"
+                      name="Subject"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+                  <div className="flex flex-col gap-3 col-span-2">
+                    <label
+                      htmlFor="message"
+                      className="text-sm leading-[16px] tracking-normal"
+                      style={{ fontFamily: "Figtree" }}
+                    >
+                      Message
+                    </label>
+
+                    <textarea
+                      id="message"
+                      name="Message"
+                      placeholder="Message"
+                      rows={5}
+                      className="w-full min-h-[120px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base placeholder:leading-[20px] placeholder:text-[#545454] max-h-[180px]"
+                      required
+                    />
+                  </div>
+                </div>
+                <button
+                  className={
+                    "px-4 w-fit py-3.5 bg-[#E64949] text-white text-base leading-[14px] font-medium rounded-[36px] cursor-pointer" +
+                    (isSubmitting ? " opacity-50 cursor-not-allowed" : "")
+                  }
+                  style={{ fontFamily: "Outfit" }}
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
+              </form>
             </div>
           </motion.div>
         </div>
