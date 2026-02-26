@@ -1,6 +1,6 @@
 import Hero from "./sections/Hero";
 import Cta from "./sections/Cta";
-import WhoWeAre from "./WhoWeAre";
+import WhoWeAre from "./sections/WhoWeAre";
 import Usmap from "./sections/Usmap";
 import Footer from "./sections/Footer";
 import Quote from "./sections/Quote";
