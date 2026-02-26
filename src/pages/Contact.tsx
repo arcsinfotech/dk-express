@@ -47,7 +47,8 @@ const Contact = () => {
         <div className="flex flex-row gap-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
             className="bg-white rounded-[26px] w-[65%] relative z-20"
           >
@@ -228,7 +229,8 @@ const Contact = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
             className="bg-white rounded-[26px] w-[35%] relative z-20"
           >
