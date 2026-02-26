@@ -89,11 +89,11 @@ const Customers = () => {
       <div className="absolute top-[81px] left-[1436px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
       <div className="absolute top-[560px] left-[761px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
       <div className="mx-[135px] my-[120px] flex gap-[40px] bg-white rounded-[26px] relative z-10 p-3">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5 }}
+        <div
+          // initial={{ opacity: 0, x: -40 }}
+          // whileInView={{ opacity: 1, x: 0 }}
+          // viewport={{ once: true }}
+          // transition={{ duration: 1.5 }}
           className="relative z-20"
         >
           <div className="relative w-[705px] h-[730px] p-[36px] rounded-[16px] bg-[#01112D] overflow-hidden">
@@ -127,13 +127,13 @@ const Customers = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5 }}
+        <div
+          // initial={{ opacity: 0, x: 40 }}
+          // whileInView={{ opacity: 1, x: 0 }}
+          // viewport={{ once: true }}
+          // transition={{ duration: 1.5 }}
           className="w-full m-2.5 relative z-20"
         >
           <form
@@ -309,7 +309,7 @@ const Customers = () => {
               {isSubmitting ? "Submitting..." : "Submit Quote Request"}
             </button>
           </form>
-        </motion.div>
+        </div>
       </div>
       <Footer />
     </div>

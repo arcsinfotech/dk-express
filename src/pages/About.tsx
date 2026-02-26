@@ -46,22 +46,22 @@ export default function About() {
           <div className="bg-[#E64949] rounded-full absolute w-[168px] h-[168px] top-[-44px] left-[-38px] blur-[120px] z-0" />
           <div className="bg-[#E64949] rounded-full absolute w-[168px] h-[168px] top-[344px] left-[376px] blur-[120px] z-0" />
           <div className="bg-[#E64949] rounded-full absolute w-[168px] h-[168px] top-[-52px] left-[714px] blur-[120px] z-0" />
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
+          <div
+            // initial={{ opacity: 0, x: -40 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // viewport={{ once: true }}
+            // transition={{ duration: 1.5 }}
             className="h-full relative z-20"
           >
             <div className="w-[805px] h-[409px] bg-gray-200 rounded-[16px]">
               <img src={aboutTruck} alt="" />
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
+          </div>
+          <div
+            // initial={{ opacity: 0, x: 40 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // viewport={{ once: true }}
+            // transition={{ duration: 1.5 }}
             className="h-full flex flex-col gap-4 relative justify-center items-center w-[774px] z-20"
           >
             <svg
@@ -523,7 +523,7 @@ export default function About() {
                 trusted partner in the logistics industry.
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
