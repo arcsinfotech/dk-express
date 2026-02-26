@@ -134,7 +134,7 @@ export default function Cta() {
             />
           </div>
 
-          <div className="absolute w-[334px] max-[768px]:w-[141px] h-[334px] max-[768px]:h-[141px] bg-[#B60001] rounded-full top-[355px] max-[768px]:top-[180px] left-[-258px] max-[768px]:left-[-78px] blur-[200px] max-[768px]:blur-[100px]" />
+          <div className="absolute w-[334px] max-[768px]:w-[141px] h-[334px] max-[768px]:h-[141px] bg-[#B60001] rounded-full top-[355px] max-[768px]:top-[180px] left-[-258px] max-[768px]:left-[-78px] blur-[200px]" />
         </div>
       </motion.div>
 
