@@ -16,7 +16,7 @@ export default function WhoWeAre() {
   const isMobile = useIsMobile();
 
   return (
-    <section className="py-24 max-[768px]:py-[60px] h-[850px] max-[768px]:h-fit bg-[#00112D]" style={{ fontFamily: "Outfit" }}>
+    <section className="py-24 max-[768px]:py-[60px] h-[850px] max-[768px]:h-fit bg-[#00112D] overflow-hidden" style={{ fontFamily: "Outfit" }}>
       <div className="container mx-auto px-4">
         <div className="grid max-[768px]:grid-cols-1 grid-cols-2 gap-16 max-[768px]:gap-[40px] items-center">
           {/* Image */}
