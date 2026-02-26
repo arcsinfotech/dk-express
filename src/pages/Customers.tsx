@@ -91,7 +91,8 @@ const Customers = () => {
       <div className="mx-[135px] my-[120px] flex gap-[40px] bg-white rounded-[26px] relative z-10 p-3">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1.5 }}
           className="relative z-20"
         >
@@ -130,9 +131,10 @@ const Customers = () => {
 
         <motion.div
           initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1.5 }}
-          className="w-full m-2.5"
+          className="w-full m-2.5 relative z-20"
         >
           <form
             className="flex flex-col gap-[24px] w-full"

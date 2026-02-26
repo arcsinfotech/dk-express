@@ -48,9 +48,10 @@ export default function About() {
           <div className="bg-[#E64949] rounded-full absolute w-[168px] h-[168px] top-[-52px] left-[714px] blur-[120px] z-0" />
           <motion.div
             initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="h-full relative z-10"
+            className="h-full relative z-20"
           >
             <div className="w-[805px] h-[409px] bg-gray-200 rounded-[16px]">
               <img src={aboutTruck} alt="" />
@@ -58,9 +59,10 @@ export default function About() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="h-full flex flex-col gap-4 relative justify-center items-center w-[774px]"
+            className="h-full flex flex-col gap-4 relative justify-center items-center w-[774px] z-20"
           >
             <svg
               width="774"
@@ -546,9 +548,10 @@ export default function About() {
         <div className="relative z-10 mx-[135px] my-[120px] flex gap-[139px]">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="flex flex-col gap-[26px]"
+            className="flex flex-col gap-[26px] relative z-20"
           >
             <div
               className="text-[56px] leading-[58px] font-semibold tracking-normal flex gap-3"
@@ -615,7 +618,8 @@ export default function About() {
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
             className="bg-[#FFFFFF] rounded-[26px] p-3"
           >
@@ -682,8 +686,10 @@ export default function About() {
           </div>
           <motion.div
             initial={{ opacity: 0.5, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
+            className="relative z-20"
           >
             <div className="flex flex-row gap-6.5 justify-end relative z-10">
               {TeamMembers.map((member, index) => (
