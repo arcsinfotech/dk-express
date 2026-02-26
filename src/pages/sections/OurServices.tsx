@@ -3,8 +3,10 @@ import ServiceTransport from "@/assets/images/service-transport.png";
 import ServiceDryVan from "@/assets/images/service-dry-van.png";
 import ServiceCrossDock from "@/assets/images/service-cross-dock.png";
 import ServiceStorage from "@/assets/images/service-storage.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function OurServices() {
+  const isMobile = useIsMobile()
   const serviceCards = [
     {
       image: ServiceTransport,
@@ -32,55 +34,59 @@ export default function OurServices() {
     },
   ];
   return (
-    <div className="flex flex-col px-[60px] pt-[60px]">
-      <div className="bg-[#F2F2F2] rounded-[26px] px-[75px] py-[60px] flex flex-col gap-[60px]">
+    <div className="flex flex-col px-[60px] max-[768px]:px-[20px] pt-[60px] max-[768px]:py-[60px]">
+      
+      <div className="bg-[#F2F2F2] rounded-[26px] px-[75px] max-[768px]:p-0 py-[60px] flex flex-col gap-[60px] max-[768px]:gap-[46px]">
         <div className="flex flex-col items-center gap-2">
           <div
-            className="text-lg leading-[22px] tracking-normal bg-[#0000000A] rounded-[36px] py-2 px-4 text-center w-fit text-[#545454]"
+            className="text-lg max-[768px]:text-[12px] leading-[22px] tracking-normal bg-[#0000000A] rounded-[36px] py-2 px-4 max-[768px]:py-0 text-center w-fit text-[#545454]"
             style={{ fontFamily: "Outfit" }}
           >
             Your Navigator in the Trade World
           </div>
           <div
-            className="flex gap-2 justify-center text-[54px] leading-[58px] tracking-normal font-semibold"
+            className="flex gap-2 justify-center text-[54px] max-[768px]:text-[32px] leading-[58px] tracking-normal font-semibold"
             style={{ fontFamily: "Raleway" }}
           >
             <span>Our</span>
             <span className="text-[#E64949]">Services</span>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-[28px]">
+        
+        <div className="grid grid-cols-4 gap-[28px] max-[768px]:flex max-[768px]:overflow-x-auto max-[768px]:gap-4">
           {serviceCards.map((card, index) => (
             <div
               key={index}
-              className="bg-[#FFFFFF] rounded-[26px] p-2 flex flex-col gap-4 overflow-hidden h-[544px] w-[391px]"
+              className="bg-[#FFFFFF] rounded-[26px] p-2 max-[768px]:p-1.5 flex flex-col gap-4 max-[768px]:gap-3.5 overflow-hidden h-[544px] max-[768px]:h-fit w-[391px] max-[768px]:w-[296px] max-[768px]:min-w-[296px]"
             >
-              <div className="overflow-hidden rounded-[20px] group/outer cursor-pointer h-[366px] w-[375px] bg-gray-100">
+              <div className="overflow-hidden rounded-[20px] max-[768px]:rounded-[12px] group/outer cursor-pointer h-[366px] max-[768px]:h-[252px] w-[375px] max-[768px]:w-[284px] bg-gray-100">
                 <img
                   src={card.image}
                   alt={card.title}
                   className="scale-110 group-hover/outer:scale-100 transition-transform duration-500"
                 />
               </div>
-              <div className="px-2 flex flex-col gap-2">
+
+              <div className="px-2 flex flex-col gap-2 max-[768px]:gap-1.5">
                 <h3
-                  className="font-semibold text-[22px] leading-[26px] tracking-normal"
+                  className="font-semibold text-[22px] max-[768px]:text-[18px] leading-[26px] tracking-normal"
                   style={{ fontFamily: "Raleway" }}
                 >
                   {card.title}
                 </h3>
                 <p
-                  className="text-[16px] leading-[22px] tracking-normal text-[#444] h-[66px]"
+                  className="text-[16px] leading-[22px] max-[768px]:leading-[16px] max-[768px]:text-[12px] tracking-normal text-[#444] h-[66px]"
                   style={{ fontFamily: "figtree" }}
                 >
                   {card.description}
                 </p>
               </div>
+
               <div
                 className="px-2 pb-2 flex gap-1.5 items-center text-black hover:text-[#E64949] transition-colors duration-500 overflow-hidden group/inner cursor-pointer"
                 style={{ fontFamily: "Figtree" }}
               >
-                <span className="text-base leading-[22px]">Learn More</span>
+                <span className="text-base max-[768px]:text-[14px] leading-[22px]">Learn More</span>
 
                 <div className="relative w-4 h-4 overflow-hidden">
                   {/* Arrow 1 */}
@@ -93,14 +99,17 @@ export default function OurServices() {
             </div>
           ))}
         </div>
+      
       </div>
-      <div className="bg-[#E64949] rounded-[26px] py-[26px] flex justify-between px-[72px] mx-[75px] my-[120px]">
-        <div className="flex gap-[84px] items-center">
+
+      <div className="bg-[#E64949] rounded-[26px] py-[26px] flex max-[768px]:flex-col justify-between px-[72px] mx-[75px] max-[768px]:mx-[20px] my-[120px] max-[768px]:my-[60px] max-[768px]:mb-0 max-[768px]:px-[26px]">
+        
+        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
           <div className="flex gap-[22px] items-center">
-            <div className="rounded-full p-[29px] border border-[#FFD7D7]">
+            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width="32"
-                height="32"
+                width={ isMobile ? "24" : "32"}
+                height={ isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,29 +123,30 @@ export default function OurServices() {
                 />
               </svg>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 max-[768px]:gap-0">
               <div
-                className="text-[38px] leading-[38px] tracking-normal font-extrabold text-white"
+                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 70+
               </div>
               <div
-                className="text-[28px] leading-[32px] tracking-normal font-medium text-white"
+                className="text-[28px] max-[768px]:text-[18px] leading-[32px] max-[768px]:leading-[22px] tracking-normal font-medium text-white"
                 style={{ fontFamily: "Raleway" }}
               >
                 Trucks
               </div>
             </div>
           </div>
-          <div className="h-[177px] bg-[#ffffff] w-px" />
+          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px" />
         </div>
-        <div className="flex gap-[84px] items-center">
-          <div className="flex gap-[22px] items-center">
-            <div className="rounded-full p-[29px] border border-[#FFD7D7]">
+        
+        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
+          <div className="flex gap-[22px] items-center max-[768px]:mt-[26px]">
+            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width="32"
-                height="32"
+                width={ isMobile ? "24" : "32"}
+                height={ isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,29 +188,30 @@ export default function OurServices() {
                 </defs>
               </svg>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 max-[768px]:gap-0">
               <div
-                className="text-[38px] leading-[38px] tracking-normal font-extrabold text-white"
+                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 1000+
               </div>
               <div
-                className="text-[28px] leading-[32px] tracking-normal font-medium text-white"
+                className="text-[28px] max-[768px]:text-[18px] leading-[32px] max-[768px]:leading-[22px] tracking-normal font-medium text-white"
                 style={{ fontFamily: "Raleway" }}
               >
                 Trailers
               </div>
             </div>
           </div>
-          <div className="h-[177px] bg-[#ffffff] w-px" />
+          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px" />
         </div>
-        <div className="flex gap-[84px] items-center">
-          <div className="flex gap-[22px] items-center">
-            <div className="rounded-full p-[29px] border border-[#FFD7D7]">
+        
+        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
+          <div className="flex gap-[22px] items-center max-[768px]:mt-[26px]">
+            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width="32"
-                height="32"
+                width={ isMobile ? "24" : "32"}
+                height={ isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -221,29 +232,30 @@ export default function OurServices() {
                 />
               </svg>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 max-[768px]:gap-0">
               <div
-                className="text-[38px] leading-[38px] tracking-normal font-extrabold text-white"
+                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 12
               </div>
               <div
-                className="text-[28px] leading-[32px] tracking-normal font-medium text-white"
+                className="text-[28px] max-[768px]:text-[18px] leading-[32px] tracking-normal font-medium text-white max-[768px]:leading-[22px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 States Covered
               </div>
             </div>
           </div>
-          <div className="h-[177px] bg-[#ffffff] w-px" />
+          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px" />
         </div>
-        <div className="flex gap-[84px] items-center">
-          <div className="flex gap-[22px] items-center">
-            <div className="rounded-full p-[29px] border border-[#FFD7D7]">
+
+        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
+          <div className="flex gap-[22px] items-center max-[768px]:mt-[26px]">
+            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width="32"
-                height="32"
+                width={ isMobile ? "24" : "32"}
+                height={ isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -257,22 +269,22 @@ export default function OurServices() {
                 />
               </svg>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 max-[768px]:gap-0">
               <div
-                className="text-[38px] leading-[38px] tracking-normal font-extrabold text-white"
+                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 1997+
               </div>
               <div
-                className="text-[28px] leading-[32px] tracking-normal font-medium text-white"
+                className="text-[28px] max-[768px]:text-[18px] leading-[32px] tracking-normal font-medium text-white max-[768px]:leading-[22px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 Established
               </div>
             </div>
           </div>
-          <div className="h-[177px] bg-[#ffffff] w-px hidden" />
+          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px hidden" />
         </div>
       </div>
     </div>
