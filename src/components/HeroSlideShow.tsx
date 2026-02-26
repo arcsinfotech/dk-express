@@ -17,7 +17,7 @@ export default function HeroSlideShow() {
   );
 
   return (
-    <div className="w-[820px] p-3 h-[605px] border border-[#FFFFFF47] rounded-[26px] backdrop-blur-[60px]">
+    <div className="w-[820px] max-[768px]:w-full p-3 h-[605px] max-[768px]:h-[266px] border border-[#FFFFFF47] rounded-[26px] backdrop-blur-[60px]">
         <Carousel className="w-full h-full" opts={{ loop: true, watchDrag: false }} plugins={[autoplay.current]}>
           <CarouselContent className="h-full!">
             {Array.from({ length: 4 }).map((_, index) => (

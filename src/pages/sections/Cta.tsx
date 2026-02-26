@@ -1,9 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
-
+import { useIsMobile } from "@/hooks/use-mobile";
 import CtaImage from "@/assets/images/cta.png";
 
 export default function Cta() {
+  const isMobile = useIsMobile();
   const ctaCards = [
     {
       title: "Shippers",
@@ -101,61 +102,61 @@ export default function Cta() {
     },
   ];
   return (
-    <div className="w-full h-full flex items-center mt-8 justify-between overflow-hidden">
+    <div className="w-full h-full flex max-[768px]:flex-col items-center max-[768px]:items-start mt-8 max-[768px]:my-[60px] justify-between max-[768px]:h-fit overflow-hidden max-[768px]:overflow-visible">
       <motion.div
-        initial={{ opacity: 0, x: -40 }}
+        initial={ isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.5 }}
-        className="w-[40%] h-full"
+        transition={ isMobile ? { duration: 0 } : { duration: 1.5 } }
+        className="w-[40%] max-[768px]:w-full h-full max-[768px]:h-fit"
       >
-        <div className="relative w-full h-full flex flex-col items-center justify-center">
+        <div className="relative w-full h-full max-[768px]:h-fit flex flex-col items-center justify-center">
           <div
-            className="pl-[135px] text-[54px] leading-14 w-full font-semibold"
+            className="pl-[135px] max-[768px]:px-[20px] text-[54px] max-[768px]:text-[32px] leading-14 max-[768px]:leading-[38px] w-full font-semibold whitespace-normal"
             style={{ fontFamily: "'Raleway', sans-serif" }}
           >
             Your Gateway To <br />{" "}
             <span className="text-[#E64949]">Smarter Logistics</span>
           </div>
           <div
-            className="pl-[135px] mt-4 capitalize text-[18px] text-[#545454] font-normal"
+            className="pl-[135px] max-[768px]:px-[20px] mt-4 capitalize text-[18px] max-[768px]:text-[14px] text-[#545454] font-normal"
             style={{ fontFamily: "'Figtree', sans-serif" }}
           >
             Empowering businesses with reliable shipping, carrier support, and
             career opportunities. From real-time tracking to seamless with
             confidence.
           </div>
-          <div>
+          <div className="max-[768px]:mt-3">
             <img
               src={CtaImage}
               alt="CTA Image"
-              className="w-full h-[285px] object-fit"
+              className="w-full h-[285px] max-[768px]:h-auto object-fit"
             />
           </div>
 
-          <div className="absolute w-[334px] h-[334px] bg-[#B60001] rounded-full top-[355px] left-[-258px] blur-[200px]" />
+          <div className="absolute w-[334px] max-[768px]:w-[141px] h-[334px] max-[768px]:h-[141px] bg-[#B60001] rounded-full top-[355px] max-[768px]:top-[180px] left-[-258px] max-[768px]:left-[-78px] blur-[200px] max-[768px]:blur-[100px]" />
         </div>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 40 }}
+        initial={ isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.5, delay: 0.2 }}
-        className="w-[60%] h-full flex items-center justify-center"
+        transition={ isMobile ? { duration: 0, delay: 0 } : { duration: 1.5, delay: 0.2 } }
+        className="w-[60%] h-full max-[768px]:w-full flex items-center justify-center"
       >
-        <div className="flex items-center justify-center gap-[12px] overflow-hidden">
+        <div className="flex max-[768px]:flex-col items-0center justify-center gap-[12px] overflow-hidden max-[768px]:px-[20px] max-[768px]:h-full max-[768px]:pt-[28px]">
           {ctaCards.map((card, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center justify-between bg-[#F4F3FA] w-[302px] h-[432px] rounded-[26px] pb-11 relative cursor-pointer overflow-hidden"
+              className="group flex flex-col items-center justify-between bg-[#F4F3FA] w-[302px] h-[432px] max-[768px]:w-full max-[768px]:h-auto rounded-[26px] pb-11 max-[768px]:pb-3 relative cursor-pointer overflow-hidden"
             >
               <div className="flex justify-between w-full items-start p-4">
                 <div className="text-[#E8E6F5] text-5xl font-semibold">
                   {String(index + 1).padStart(2, "0")}
                 </div>
               </div>
-              <div className="flex flex-col items-start w-full h-[204px] min-h-[204px]">
+              <div className="flex flex-col items-start w-full h-[204px] min-h-[204px] max-[768px]:h-fit max-[768px]:min-h-fit">
                 <div className="relative w-[100px] h-[100px] flex items-center justify-center">
                   <div className="absolute inset-0 rounded-full bg-[#407BFF] blur-[90px]" />
                   <div className="relative bg-white/40 rounded-2xl p-4">
@@ -165,14 +166,14 @@ export default function Cta() {
 
                 <div className="px-4">
                   <div
-                    className="font-semibold text-[28px] leading-9.5"
+                    className="font-semibold text-[28px] max-[768px]:text-[20px] leading-9.5"
                     style={{ fontFamily: "Raleway" }}
                   >
                     {card.title}
                   </div>
 
                   <div
-                    className="text-base leading-5.5 font-normal"
+                    className="text-base max-[768px]:text-[14px] leading-5.5 max-[768px]:leading-[20px] font-normal"
                     style={{ fontFamily: "Figtree" }}
                   >
                     {card.description}
@@ -183,7 +184,7 @@ export default function Cta() {
                 className="flex gap-1.5 items-center absolute right-0 pr-2.5 pt-3 text-black group-hover:text-[#E64949] transition-colors duration-500 overflow-hidden"
                 style={{ fontFamily: "Figtree" }}
               >
-                <span className="text-lg leading-[22px]">Track now</span>
+                <span className="text-lg max-[768px]:text-[16px] leading-[22px]">Track now</span>
 
                 <div className="relative w-4 h-4 overflow-hidden">
                   {/* Arrow 1 */}
