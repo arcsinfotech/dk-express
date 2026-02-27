@@ -8,8 +8,10 @@ import team3 from "@/assets/team-03.png";
 import team4 from "@/assets/team-04.png";
 
 import TimeLine from "@/assets/timeline.svg";
+import TimeLine1 from "@/assets/timeline1.svg"
 import Testimonials from "./sections/Testimonials";
 import Quote from "./sections/Quote";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const TeamMembers = [
   {
@@ -39,8 +41,9 @@ const TeamMembers = [
 ];
 
 export default function About() {
+  const isMobile = useIsMobile()
   return (
-    <div>
+    <div className="max-[768px]:overflow-hidden">
       <div className="bg-[#F2F2F2] flex justify-center items-center w-full">
         <div className="relative flex max-[768px]:flex-col justify-between items-center bg-[#FFFFFF] rounded-[26px] w-full gap-[38px] max-[768px]:gap-[36px] mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] p-[12px] z-10 overflow-hidden">
           <div className="bg-[#E64949] max-[768px]:hidden rounded-full absolute w-[168px] h-[168px] top-[-44px] left-[-38px] blur-[120px] z-0" />
@@ -636,26 +639,28 @@ export default function About() {
         </div>
       </div>
 
-      <div className="bg-[#F4F5F7] py-[120px] flex flex-col gap-[83px]">
-        <div className="flex flex-col items-center justify-center gap-3">
+      <div className="bg-[#F4F5F7] relative py-[120px] max-[768px]:py-0 flex flex-col gap-[83px]">
+        <div className="flex flex-col items-center justify-center gap-3 max-[768px]:absolute max-[768px]:top-[60px] max-[768px]:w-full">
           <div
-            className="bg-[#0000000A] rounded-[36px] text-[18px] leading-[22px] tracking-normal py-2 px-4 w-fit"
+            className="bg-[#0000000A] rounded-[36px] text-[18px] max-[768px]:text-[12px] leading-[22px] tracking-normal py-2 px-4 w-fit"
             style={{ fontFamily: "Outfit" }}
           >
             Our Journey
           </div>
           <div
-            className="text-[54px] leading-[58px] font-semibold tracking-normal flex gap-3"
+            className="text-[54px] leading-[58px] max-[768px]:text-[32px] max-[768px]:leading-[38px] font-semibold tracking-normal flex gap-3"
             style={{ fontFamily: "Raleway" }}
           >
             <span className="text-[#262626]">Company</span>
             <span className="text-[#E64949]">Timeline</span>
           </div>
         </div>
-        <img src={TimeLine} alt="Timeline" />
+
+        <img src={isMobile ? TimeLine1 : TimeLine} alt="Timeline" className="max-[768px]:w-full max-[768px]:h-auto" />
       </div>
+
       <div className="bg-white">
-        <div className="py-[120px] px-[135px] bg-[linear-gradient(to_bottom,#00112D_50%,#FFFFFF_50%)] relative overflow-hidden">
+        <div className="py-[120px] px-[135px] max-[768px]:px-0 max-[768px]:pt-[200px] max-[768px]:pb-0 bg-[linear-gradient(to_bottom,#00112D_50%,#FFFFFF_50%)] relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1/2 overflow-hidden pointer-events-none">
             <svg
               width="387"
@@ -674,15 +679,15 @@ export default function About() {
             </svg>
             <div className="w-[494px] h-[494px] bg-[#001E50] top-[-48px] left-[330px] absolute blur-[100px] rounded-full" />
             <div className="w-[494px] h-[494px] bg-[#001E50] top-[151px] left-[1552px] absolute blur-[100px] rounded-full" />
-            <div className="flex flex-col gap-3 absolute top-[120px] left-[144px]">
+            <div className="flex flex-col gap-3 absolute top-[120px] max-[768px]:top-[60px] max-[768px]:left-0 left-[144px] max-[768px]:w-full">
               <div
-                className="bg-[#FFFFFF14] text-white px-4 py-2 text-lg leading-[22px] rounded-[36px] w-fit"
+                className="bg-[#FFFFFF14] text-white px-4 py-2 text-lg max-[768px]:text-[10px] leading-[22px] rounded-[36px] w-fit max-[768px]:self-center"
                 style={{ fontFamily: "Outfit" }}
               >
                 Leadership
               </div>
               <div
-                className="flex flex-row gap-2 text-[54px] leading-[58px] font-semibold"
+                className="flex flex-row gap-2 text-[54px] max-[768px]:text-[32px] leading-[58px] font-semibold max-[768px]:self-center"
                 style={{ fontFamily: "Raleway" }}
               >
                 <span className="text-white">Our</span>
@@ -690,17 +695,18 @@ export default function About() {
               </div>
             </div>
           </div>
+          
           <motion.div
-            initial={{ opacity: 0.5, x: 40 }}
+            initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0.5, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
+            transition={ isMobile ? { duration: 0 } : { duration: 1.5 }}
             className="relative z-20"
           >
-            <div className="flex flex-row gap-6.5 justify-end relative z-10">
+            <div className="flex gap-6.5 justify-end max-[768px]:justify-start relative z-10 max-[768px]:overflow-scroll no-scrollbar w-full max-[768px]:px-[20px] max-[768px]:pb-[60px]">
               {TeamMembers.map((member, index) => (
                 <div
-                  className="h-[430px] w-[293px] rounded-[26px] overflow-hidden shadow-[0_22px_49.8px_rgba(0,0,0,0.12)]"
+                  className="h-[430px] max-[768px]:h-fit min-w-[293px] max-[768px]:w-full rounded-[26px] max-[768px]:rounded-[16px] overflow-hidden shadow-[0_22px_49.8px_rgba(0,0,0,0.12)]"
                   key={index}
                 >
                   <div
@@ -1332,10 +1338,10 @@ export default function About() {
                     className="flex flex-col gap-2 px-[21px] py-4 text-lg leading-[20px] tracking-normal"
                     style={{ fontFamily: "Raleway" }}
                   >
-                    <div>
+                    <div className="font-semibold max-[768px]:text-[12px] max-[768px]:leading-[14px]">{member.role}</div>
+                    <div className="max-[768px]:text-[14px] max-[768px]:leading-[14px]">
                       {member.name} ({member.initials})
                     </div>
-                    <div className="font-semibold">{member.role}</div>
                   </div>
                 </div>
               ))}

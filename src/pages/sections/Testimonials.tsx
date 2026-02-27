@@ -104,7 +104,7 @@ export default function Testimonials() {
             <div className="text-[54px] max-[768px]:text-[32px] font-semibold" style={{ fontFamily: "'Raleway', sans-serif" }}>
                 What <span className="text-[#E64949]">People</span> Say
             </div>
-            <div className="w-full h-[340px] max-[768px]:h-[230px] flex gap-4 px-4 mt-[48px] overflow-x-scroll">
+            <div className="w-full h-[340px] max-[768px]:h-[230px] flex gap-4 px-4 mt-[48px] overflow-x-scroll no-scrollbar">
                 {testimonials.map((testimonial) => (
                     <TestimonialCard key={testimonial.name} testimonial={testimonial} />
                 ))}
