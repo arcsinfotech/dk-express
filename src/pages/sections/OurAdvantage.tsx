@@ -48,7 +48,7 @@ export default function OurAdvantage() {
           </div>
         </div>
         
-        <div className="grid grid-cols-4 gap-[28px] max-[768px]:flex max-[768px]:gap-2 max-[768px]:overflow-x-auto">
+        <div className="grid grid-cols-4 gap-[28px] max-[768px]:flex max-[768px]:gap-2 max-[768px]:overflow-x-auto max-[768px]:px-[20px]">
           {advantageCards.map((card, index) => (
             <div
               key={index}
