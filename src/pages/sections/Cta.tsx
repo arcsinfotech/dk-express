@@ -2,9 +2,12 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import CtaImage from "@/assets/images/cta.png";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Cta() {
   const isMobile = useIsMobile();
+  const navigate = useNavigate()
   const ctaCards = [
     {
       title: "Shippers",
@@ -150,6 +153,7 @@ export default function Cta() {
             <div
               key={index}
               className="group flex flex-col items-center justify-between bg-[#F4F3FA] w-[302px] h-[432px] max-[768px]:w-full max-[768px]:h-auto rounded-[26px] pb-11 max-[768px]:pb-3 relative cursor-pointer overflow-hidden"
+              onClick={() => card.title === "Careers" ? navigate("/opportunities") : navigate("/contact") }
             >
               <div className="flex justify-between w-full items-start p-4">
                 <div className="text-[#E8E6F5] text-5xl font-semibold">
