@@ -25,7 +25,7 @@ const CommonSubHeader = ({
             {heading}
           </div>
           <div
-            className={`${breakLine ? "flex flex-col gap-0" : "flex gap-4"} text-[92px] max-[768px]:text-[48px] max-[768px]:leading-[52px] leading-[102px] tracking-normal font-medium`}
+            className={`${breakLine ? "flex flex-col gap-0" : "flex gap-4"} text-[92px] max-[768px]:text-[48px] max-[768px]:leading-[52px] leading-[102px] tracking-normal font-medium max-[768px]:text-center`}
             style={{ fontFamily: "'Raleway', sans-serif" }}
           >
             <span className="text-white">{subHeading}</span>
@@ -35,7 +35,7 @@ const CommonSubHeader = ({
           </div>
         </div>
         <div
-          className="text-lg max-[768px]:text-sm max-[768px]:px-4 leading-[22px] max-[768px]:leading-[20px] tracking-normal text-white max-w-[505px] text-center capitalize"
+          className="text-lg max-[768px]:text-sm max-[768px]:px-6 leading-[22px] max-[768px]:leading-[20px] tracking-normal text-white max-w-[505px] text-center capitalize"
           style={{ fontFamily: "'Figtree', sans-serif" }}
         >
           {description}

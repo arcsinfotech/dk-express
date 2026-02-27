@@ -11,8 +11,10 @@ import Customers from "./pages/Customers";
 import Contact from "./pages/Contact";
 import CommonSubHeader from "./components/CommonSubHeader";
 import ScrollToTop from "./components/ScrollToTop";
+import { useIsMobile } from "./hooks/use-mobile";
 
 function App() {
+  const isMobile = useIsMobile()
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -53,6 +55,7 @@ function App() {
                 heading="Join Our Team"
                 subHeading="Partner With"
                 secondSubHeading="DK Express"
+                breakLine={isMobile}
                 description="Discover opportunities for carriers, owner-operators, and drivers."
               />
             }
