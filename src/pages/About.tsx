@@ -4,8 +4,6 @@ import aboutTruck from "@/assets/images/about-truck.png";
 import aboutTruck2 from "@/assets/images/about-truck2.png";
 import team1 from "@/assets/team-01.png";
 import team2 from "@/assets/team-02.png";
-import team3 from "@/assets/team-03.png";
-import team4 from "@/assets/team-04.png";
 
 import TimeLine from "@/assets/timeline.svg";
 import TimeLine1 from "@/assets/timeline1.svg"
@@ -17,26 +15,12 @@ const TeamMembers = [
   {
     name: "Daljit Singh",
     role: "President",
-    initials: "DK",
     image: team1,
   },
   {
     name: "Sarb Singh",
     role: "Operations Manager",
-    initials: "SS",
     image: team2,
-  },
-  {
-    name: "Sarb Singh",
-    role: "Operations Manager",
-    initials: "SS",
-    image: team3,
-  },
-  {
-    name: "Sarb Singh",
-    role: "Operations Manager",
-    initials: "SS",
-    image: team4,
   },
 ];
 
@@ -1340,7 +1324,7 @@ export default function About() {
                   >
                     <div className="font-semibold max-[768px]:text-[12px] max-[768px]:leading-[14px]">{member.role}</div>
                     <div className="max-[768px]:text-[14px] max-[768px]:leading-[14px]">
-                      {member.name} ({member.initials})
+                      {member.name}
                     </div>
                   </div>
                 </div>

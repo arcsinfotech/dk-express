@@ -1,4 +1,4 @@
-import AdvantageFamily from "@/assets/images/advantage-family.png";
+import AdvantageFamily from "@/assets/images/advantage-family.jpg";
 import AdvantageEquipment from "@/assets/images/advantage-equipment.png";
 import AdvantageExpert from "@/assets/images/advantage-experts.png";
 import AdvantageExperience from "@/assets/images/advantage-experience.png";

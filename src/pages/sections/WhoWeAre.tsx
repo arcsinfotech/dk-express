@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle, MapPin } from "lucide-react";
-import trustTruckImg from "@/assets/trust-truck.jpg";
+import trustTruckImg from "@/assets/trust_truck.png";
 import peopleImg from "@/assets/people.png";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -100,7 +100,7 @@ export default function WhoWeAre() {
               <img
                 src={trustTruckImg}
                 alt="California Central Valley"
-                className="rounded-[26px] max-[768px]:rounded-[10px] scale-x-[-1] shadow-xl h-[230px] max-[768px]:h-[138px] w-full object-cover aspect-4/3"
+                className="rounded-[26px] max-[768px]:rounded-[10px] shadow-xl h-[230px] max-[768px]:h-[138px] w-full object-cover aspect-4/3"
               />
             </div>
           </motion.div>
