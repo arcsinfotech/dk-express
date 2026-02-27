@@ -131,7 +131,7 @@ export default function Navbar() {
                                 {label}
                             </Link>
                         ))}
-                        <button className="mt-2 border border-white rounded-full px-5 py-2 bg-transparent text-white text-sm font-semibold hover:bg-white hover:text-black transition-all self-start">
+                        <button className="mt-2 border border-white rounded-full px-5 py-2 bg-transparent text-white text-sm font-semibold hover:bg-white hover:text-black transition-all self-start" onClick={() => {navigate("/contact"); setMenuOpen(false)}}>
                             Contact Us
                         </button>
                     </div>
