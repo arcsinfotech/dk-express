@@ -69,6 +69,7 @@ function App() {
                 heading="Get Started"
                 subHeading="Request a"
                 secondSubHeading="Quote"
+                breakLine={isMobile}
                 description="Fill out the form below and our team will provide a competitive quote."
               />
             }
