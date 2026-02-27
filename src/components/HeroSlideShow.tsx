@@ -1,10 +1,10 @@
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
-import Truck1 from "@/assets/images/truck1.png";
-import Truck2 from "@/assets/images/truck2.png";
-import Truck3 from "@/assets/images/truck3.png";
-import Truck4 from "@/assets/images/truck4.png";
+import Truck1 from "@/assets/hero/truck1.png";
+import Truck2 from "@/assets/hero/truck2.png";
+import Truck3 from "@/assets/hero/truck3.jpg";
+import Truck4 from "@/assets/hero/truck4.png";
 
 const Truck = [Truck1, Truck2, Truck3, Truck4];
 
