@@ -35,7 +35,7 @@ const CommonSubHeader = ({
           </div>
         </div>
         <div
-          className="text-lg max-[768px]:text-sm leading-[22px] max-[768px]:leading-[20px] tracking-normal text-white max-w-[505px] text-center capitalize"
+          className="text-lg max-[768px]:text-sm max-[768px]:px-4 leading-[22px] max-[768px]:leading-[20px] tracking-normal text-white max-w-[505px] text-center capitalize"
           style={{ fontFamily: "'Figtree', sans-serif" }}
         >
           {description}
