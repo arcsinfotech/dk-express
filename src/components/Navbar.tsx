@@ -1,12 +1,24 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { useNavigate } from "react-router-dom";
 import MobileNotch from "@/assets/mobile_notch.svg";
+import { BriefcaseBusiness, ChevronRight, Home, PhoneCall, Settings, User, Users, X } from "lucide-react";
 
 export default function Navbar() {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        
+        if (menuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+    }, [menuOpen]);
+    
     return (
         <div className="w-full max-w-[1920px] z-50 fixed" style={{ fontFamily: "'Outfit', sans-serif", height: "74px" }}>
             {/* Desktop Navbar */}
@@ -108,34 +120,43 @@ export default function Navbar() {
 
                 {/* Mobile Dropdown Menu */}
                 {menuOpen && (
-                    <div
-                        className="flex flex-col px-6 py-4 gap-4"
-                        style={{
-                            background: "linear-gradient(180deg, #2a0a0a 0%, #1a1a1a 100%)",
-                            borderTop: "1px solid rgba(255,255,255,0.1)",
-                        }}
-                    >
-                        {[
-                            { label: "Home", to: "/" },
-                            { label: "Services", to: "/services" },
-                            { label: "Opportunities", to: "/opportunities" },
-                            { label: "Customers", to: "/customers" },
-                            { label: "About Us", to: "/about" },
-                        ].map(({ label, to }) => (
-                            <Link
-                                key={label}
-                                to={to}
-                                onClick={() => setMenuOpen(false)}
-                                className="text-white text-base font-medium border-b border-white/10 pb-3 hover:text-red-400 transition-colors"
-                            >
-                                {label}
-                            </Link>
-                        ))}
-                        <button className="mt-2 border border-white rounded-full px-5 py-2 bg-transparent text-white text-sm font-semibold hover:bg-white hover:text-black transition-all self-start" onClick={() => {navigate("/contact"); setMenuOpen(false)}}>
-                            Contact Us
-                        </button>
+                    <div className="absolute top-0 left-0 z-10 w-full h-screen bg-[#00112D]">
+                        <div className="z-0 absolute left-[243px] rounded-full blur-[300px] min-h-[322px] min-w-[322px] bg-[#E64949]" />
+                        <div className="relative z-1 w-full h-[58px] bg-[#00000099] flex items-center justify-between px-[20px]">
+                            <div className="text-white text-[22px] font-semibold">
+                                Navigation
+                            </div>
+                            <button onClick={() => setMenuOpen(false)}>
+                                <X className="w-[22px] h-[22px] text-white" />
+                            </button>
+                        </div>
+                        <div className="relative z-1 flex flex-col p-[20px] gap-2">
+                            {[
+                                { label: "Home", to: "/", icon: <Home className={`w-[18px] h-[18px] ${'/' === window.location.pathname ? "text-white" : "text-[#929292]"}`} /> },
+                                { label: "Services", to: "/services", icon: <Settings className={`w-[18px] h-[18px] ${'/services' === window.location.pathname ? "text-white" : "text-[#929292]"}`} /> },
+                                { label: "Opportunities", to: "/opportunities", icon: <BriefcaseBusiness className={`w-[18px] h-[18px] ${'/opportunities' === window.location.pathname ? "text-white" : "text-[#929292]"}`} /> },
+                                { label: "Customers", to: "/customers", icon: <Users className={`w-[18px] h-[18px] ${'/customers' === window.location.pathname ? "text-white" : "text-[#929292]"}`} /> },
+                                { label: "About Us", to: "/about", icon: <User className={`w-[18px] h-[18px] ${'/about' === window.location.pathname ? "text-white" : "text-[#929292]"}`} /> },
+                                { label: "Contact Us", to: "/contact", icon: <PhoneCall className={`w-[18px] h-[18px] ${'/about' === window.location.pathname ? "text-white" : "text-[#929292]"}`} /> },
+                            ].map(({ label, to, icon }) => (
+                                <Link
+                                    key={label}
+                                    to={to}
+                                    onClick={() => setMenuOpen(false)}
+                                    className={`p-[22px] ${to === window.location.pathname ? "text-white" : "text-[#929292]"} text-[14px] border-b border-[#FFFFFF33]`}
+                                >
+                                    <div className="flex items-center justify-between">
+                                        <span className="flex items-center gap-3.5">
+                                            {icon}
+                                            {label}
+                                        </span>
+                                        <ChevronRight className={`w-[18px] h-[18px] ${to === window.location.pathname ? "text-white" : "text-[#929292]"}`} />
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
-                )}
+                    )}
             </div>
         </div>
     );
