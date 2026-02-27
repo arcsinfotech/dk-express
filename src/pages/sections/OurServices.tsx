@@ -4,9 +4,11 @@ import ServiceDryVan from "@/assets/images/service-dry-van.png";
 import ServiceCrossDock from "@/assets/images/service-cross-dock.png";
 import ServiceStorage from "@/assets/images/service-storage.png";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useNavigate } from "react-router-dom";
 
 export default function OurServices() {
   const isMobile = useIsMobile()
+  const navigate = useNavigate()
   const serviceCards = [
     {
       image: ServiceTransport,
@@ -84,6 +86,7 @@ export default function OurServices() {
 
               <div
                 className="px-2 pb-2 flex gap-1.5 items-center text-black hover:text-[#E64949] transition-colors duration-500 overflow-hidden group/inner cursor-pointer"
+                onClick={() => navigate("/contact")}
                 style={{ fontFamily: "Figtree" }}
               >
                 <span className="text-base max-[768px]:text-[14px] leading-[22px]">Learn More</span>

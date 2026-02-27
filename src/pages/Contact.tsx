@@ -266,13 +266,13 @@ const Contact = () => {
                     <div className="flex flex-col gap-3 w-1/2 max-[768px]:w-full">
                       <label
                         htmlFor="company-name"
-                        className="text-sm max-[768px]:text-[12px] leading-[16px] tracking-normal"
+                        className="text-sm max-[768px]:text-[13px] max-[768px]:font-semibold leading-[16px] tracking-normal"
                         style={{ fontFamily: "Figtree" }}
                       >
                         Company Name
                       </label>
                       <input
-                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                         type="text"
                         id="companyname"
                         name="Company Name"
@@ -289,7 +289,7 @@ const Contact = () => {
                         Email
                       </label>
                       <input
-                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454] max-[768px]:text-[14px]"
+                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-[768px]:text-[14px]"
                         type="email"
                         id="email"
                         name="Email"
@@ -308,7 +308,7 @@ const Contact = () => {
                       Phone
                     </label>
                     <input
-                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454] max-[768px]:text-[14px]"
+                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-[768px]:text-[14px]"
                       type="number"
                       id="phone"
                       name="Phone"
@@ -326,7 +326,7 @@ const Contact = () => {
                       Subject
                     </label>
                     <input
-                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454] max-[768px]:text-[14px]"
+                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-[768px]:text-[14px]"
                       type="text"
                       id="subject"
                       name="Subject"
@@ -349,7 +349,7 @@ const Contact = () => {
                       name="Message"
                       placeholder="Message"
                       rows={5}
-                      className="w-full min-h-[120px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454] max-h-[180px] max-[768px]:text-[14px]"
+                      className="w-full min-h-[120px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-h-[180px] max-[768px]:text-[14px]"
                       required
                     />
                   </div>

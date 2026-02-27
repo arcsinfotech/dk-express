@@ -153,7 +153,7 @@ const Customers = () => {
                   Company Name
                 </label>
                 <input
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                   type="text"
                   id="company-name"
                   name="Company Name"
@@ -174,7 +174,7 @@ const Customers = () => {
                   id="contact-person"
                   name="Contact Person"
                   placeholder="Your contact person"
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                   required
                 />
               </div>
@@ -192,7 +192,7 @@ const Customers = () => {
                   name="Email"
                   required
                   placeholder="email@company.com"
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                 />
               </div>
               <div className="flex flex-col gap-3">
@@ -209,7 +209,7 @@ const Customers = () => {
                   name="Phone"
                   required
                   placeholder="(209) 000-0000"
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                 />
               </div>
               <div className="flex flex-col gap-3">
@@ -226,7 +226,7 @@ const Customers = () => {
                   name="Pickup Location"
                   required
                   placeholder="City, State"
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                 />
               </div>
               <div className="flex flex-col gap-3">
@@ -243,7 +243,7 @@ const Customers = () => {
                   name="Delivery Location"
                   required
                   placeholder="City, State"
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                 />
               </div>
               <div className="flex flex-col gap-3">
@@ -259,7 +259,7 @@ const Customers = () => {
                   id="freight-type"
                   required
                   defaultValue={""}
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454] text-base leading-[20px] text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] text-base leading-[20px] text-[#545454]"
                 >
                   <option value="">Select Freight Type</option>
                   <option value="dry">Dry</option>
@@ -281,7 +281,7 @@ const Customers = () => {
                   name="Estimated Weight"
                   required
                   placeholder="Estimated weight"
-                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454]"
+                  className="h-[52px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2]"
                 />
               </div>
               <div className="flex flex-col gap-3 col-span-2 max-[768px]:col-span-1">
@@ -299,7 +299,7 @@ const Customers = () => {
                   required
                   placeholder="Tell us more about your shipment..."
                   rows={5}
-                  className="w-full min-h-[120px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#545454] max-h-[180px]"
+                  className="w-full min-h-[120px] rounded-[8px] px-3.5 py-4 max-[768px]:py-[10px] bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] max-[768px]:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-h-[180px]"
                 />
               </div>
             </div>

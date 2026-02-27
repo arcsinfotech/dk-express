@@ -16,7 +16,7 @@ const CommonSubHeader = ({
 }) => {
   return (
     <div>
-      <div className="bg-[#00112D] bg-[radial-gradient(164.75%_164.13%_at_90.7%_-30.3%,#E64949_15.28%,#00112D_65.5%)]  flex flex-col gap-4 justify-center items-center h-full py-[209px]">
+      <div className="bg-[#00112D] bg-[radial-gradient(164.75%_164.13%_at_90.7%_-30.3%,#E64949_15.28%,#00112D_65.5%)]  flex flex-col gap-4 justify-center items-center h-full py-[209px] max-[768px]:py-[180px]">
         <div className="flex flex-col gap-3 justify-center items-center ">
           <div
             className="bg-[#FFFFFF14] text-white px-4 py-2 rounded-[36px] max-[768px]:text-sm text-lg leading-[22px] tracking-normal"
