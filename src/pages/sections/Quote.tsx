@@ -43,7 +43,7 @@ export default function Quote({
         <img
           src={QuoteImage}
           alt="Quote"
-          className="w-full h-auto object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="absolute w-[600px] max-[768px]:w-[141px] h-[100px] max-[768px]:h-[141px] bg-[#B60001] rounded-full blur-[200px] max-[768px]:top-[238px] max-[768px]:left-[422px] left-1/3 -translate-x-1/2 bottom-0 pointer-events-none" />
