@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import { useNavigate } from "react-router-dom";
 import MobileNotch from "@/assets/mobile_notch.svg";
 import { BriefcaseBusiness, ChevronRight, Home, PhoneCall, Settings, User, Users, X } from "lucide-react";
+import LogoM from "@/assets/Logo.png"
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -92,7 +93,7 @@ export default function Navbar() {
                 <div
                     className="flex items-center justify-between px-4 h-full relative z-10">
                     <img
-                        src="/src/assets/Logo.png"
+                        src={LogoM}
                         alt="logo"
                         className="w-[68px] object-contain"
                     />

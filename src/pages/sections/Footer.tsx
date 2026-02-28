@@ -1,4 +1,6 @@
 import Logo from "@/components/Logo";
+import LogoM from "@/assets/Logo.png"
+
 export default function Footer() {
   const quickLinks = [
     {
@@ -141,7 +143,7 @@ export default function Footer() {
               <div className="flex flex-col gap-5 max-[768px]:gap-3">
                 {window.innerWidth < 768 ? (
                   <img
-                    src="/src/assets/Logo.png"
+                    src={LogoM}
                     alt="logo"
                     className="w-[87px] object-contain"
                   />
