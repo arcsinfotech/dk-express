@@ -1,31 +1,31 @@
 import Logo from "@/components/Logo";
-import LogoM from "@/assets/Logo.png"
+import LogoM from "@/assets/Logo.png";
 
 export default function Footer() {
   const quickLinks = [
     {
       name: "Home",
-      href: "#",
+      href: "/",
     },
     {
       name: "About Us",
-      href: "#",
+      href: "/about",
     },
     {
       name: "Services",
-      href: "#",
+      href: "/services",
     },
     {
       name: "Opportunities",
-      href: "#",
+      href: "/opportunities",
     },
     {
       name: "Customers",
-      href: "#",
+      href: "/customers",
     },
     {
       name: "Contact",
-      href: "#",
+      href: "/contact",
     },
   ];
 
@@ -212,7 +212,8 @@ export default function Footer() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  2000 West Charter Way, { window.innerWidth > 768 && <br />} Stockton, CA 95206
+                  2000 West Charter Way, {window.innerWidth > 768 && <br />}{" "}
+                  Stockton, CA 95206
                 </li>
                 <a
                   href="tel:209-954-9354"
