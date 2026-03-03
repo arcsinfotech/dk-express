@@ -36,22 +36,30 @@ const Customers = () => {
 
   const cards = [
     {
-      icon: <MapPin className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />,
+      icon: (
+        <MapPin className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />
+      ),
       title: "Address",
       details: "2000 West Charter Way, Stockton, CA",
     },
     {
-      icon: <Phone className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />,
+      icon: (
+        <Phone className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />
+      ),
       title: "Phone No",
       details: "209-954-9354",
     },
     {
-      icon: <Mail className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />,
+      icon: (
+        <Mail className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />
+      ),
       title: "Email",
       details: "dispatch@dkexpress.net",
     },
     {
-      icon: <Clock className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />,
+      icon: (
+        <Clock className="w-[20px] h-[20px] max-[768px]:w-[18px] max-[768px]:h-[18px] text-white" />
+      ),
       title: "Timings",
       details: "6:00 AM - 4:00 PM",
     },
@@ -75,21 +83,25 @@ const Customers = () => {
           className="font-medium flex flex-col items-start justify-between"
           style={{ fontFamily: "'Figtree', sans-serif" }}
         >
-          <div className="text-[14px] max-[768px]:text-[12px] text-[#D0D0D0] max-[768px]:leading-[14px]">{title}</div>
-          <div className="text-[16px] max-[768px]:text-[14px] text-white max-[768px]:leading-[20px]">{details}</div>
+          <div className="text-[14px] max-[768px]:text-[12px] text-[#D0D0D0] max-[768px]:leading-[14px]">
+            {title}
+          </div>
+          <div className="text-[16px] max-[768px]:text-[14px] text-white max-[768px]:leading-[20px]">
+            {details}
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="relative z-10 max-[768px]:overflow-hidden">
+    <div className="relative z-10 overflow-hidden">
       <div className="absolute top-[554px] left-[1499px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
       <div className="absolute top-[25px] left-[200px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
       <div className="absolute top-[81px] left-[1436px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
       <div className="absolute top-[560px] left-[761px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
-     
-      <div className="mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] flex max-[768px]:flex-col gap-[40px] bg-white rounded-[26px] relative z-10 p-3">
+
+      <div className="mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[1280px]:mx-[30px] max-[768px]:my-[60px] max-[1280px]:my-[80px] flex max-[1280px]:flex-col gap-[40px] bg-white rounded-[26px] relative z-10 p-3">
         <div
           // initial={{ opacity: 0, x: -40 }}
           // whileInView={{ opacity: 1, x: 0 }}
@@ -97,27 +109,26 @@ const Customers = () => {
           // transition={{ duration: 1.5 }}
           className="relative z-20"
         >
-          <div className="relative w-[705px] max-[768px]:w-full h-[730px] max-[768px]:h-fit p-[36px] max-[768px]:p-[16px] rounded-[16px] bg-[#01112D] overflow-hidden">
-            
+          <div className="relative w-[705px] max-[1280px]:w-full h-[730px] max-[768px]:h-fit p-[36px] max-[768px]:p-[16px] max-[1280px]:p-[26px] rounded-[16px] bg-[#01112D] overflow-hidden">
             <div className="w-[494px] h-[494px] rounded-full absolute blur-[80px] top-[-247px] left-[-242px] bg-[#001E50]" />
             <div className="w-[494px] h-[494px] rounded-full absolute blur-[80px] top-[467px] left-[439px] bg-[#001E50]" />
 
             <div className="relative z-10">
               <div
-                className="relative z-10 rounded-full capitalize text-[18px] max-[768px]:text-[12px] w-fit font-normal py-1.5 px-4 bg-[#FFFFFF14] text-white"
+                className="relative z-10 rounded-full capitalize text-[18px] max-[768px]:text-[12px] max-[1280px]:text-[14px] w-fit font-normal py-1.5 px-4 bg-[#FFFFFF14] text-white"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
                 we're here to help you
               </div>
 
               <div
-                className="mt-3 max-[768px]:mt-2 capitalize text-[44px] max-[768px]:text-[32px] font-semibold text-white max-[768px]:pr-4 max-[768px]:leading-[38px]"
+                className="mt-3 max-[768px]:mt-2 capitalize text-[44px] max-[768px]:text-[32px] max-[1280px]:text-[48px] font-semibold text-white max-[768px]:pr-4 max-[768px]:leading-[38px] max-[1280px]:leading-[54px]"
                 style={{ fontFamily: "'Raleway', sans-serif" }}
               >
                 Connect with our <span className="text-[#E64949]">team</span>
               </div>
 
-              <div className="mt-3 w-full h-[284px] max-[768px]:h-[140px] rounded-[16px] overflow-hidden">
+              <div className="mt-3 max-[1280px]:mt-6 w-full h-[284px] max-[768px]:h-[140px] rounded-[16px] overflow-hidden">
                 <img
                   src={contactUs}
                   alt="Contact Us"
