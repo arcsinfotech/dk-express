@@ -7,8 +7,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useNavigate } from "react-router-dom";
 
 export default function OurServices() {
-  const isMobile = useIsMobile()
-  const navigate = useNavigate()
+  const isMobile = useIsMobile();
+  const navigate = useNavigate();
   const serviceCards = [
     {
       image: ServiceTransport,
@@ -36,83 +36,83 @@ export default function OurServices() {
     },
   ];
   return (
-    <div className="flex flex-col px-[60px] max-[768px]:px-0 pt-[60px] max-[768px]:pt-0 max-[768px]:pb-[60px]">
-      
+    <div className="flex flex-col px-[60px] max-[1280px]:px-0 pt-[60px] max-[1280px]:pt-0 max-[1280px]:pb-[60px]">
       <div className="bg-[#F2F2F2] rounded-[26px] px-[75px] max-[768px]:p-0 py-[60px] flex flex-col gap-[60px] max-[768px]:gap-[46px] max-[768px]:py-[60px] max-[768px]:rounded-none">
         <div className="flex flex-col items-center gap-2">
           <div
-            className="text-lg max-[768px]:text-[12px] leading-[22px] tracking-normal bg-[#0000000A] rounded-[36px] py-2 px-4 max-[768px]:py-0 text-center w-fit text-[#545454]"
+            className="text-lg max-[768px]:text-[12px] max-[1280px]:text-[14px] leading-[22px] tracking-normal bg-[#0000000A] rounded-[36px] py-2 px-4 max-[768px]:py-0 text-center w-fit text-[#545454]"
             style={{ fontFamily: "Outfit" }}
           >
             Your Navigator in the Trade World
           </div>
           <div
-            className="flex gap-2 justify-center text-[54px] max-[768px]:text-[32px] leading-[58px] tracking-normal font-semibold"
+            className="flex gap-2 justify-center text-[54px] max-[768px]:text-[32px] max-[1280px]:text-[48px] leading-[58px] tracking-normal font-semibold"
             style={{ fontFamily: "Raleway" }}
           >
             <span>Our</span>
             <span className="text-[#E64949]">Services</span>
           </div>
         </div>
-        
-        <div className="grid grid-cols-4 gap-[28px] max-[768px]:flex max-[768px]:overflow-x-auto max-[768px]:gap-4 max-[768px]:px-[20px]">
+
+        <div className="grid grid-cols-4 gap-[28px] max-[768px]:flex max-[1280px]:grid-cols-2 max-[768px]:overflow-x-auto max-[768px]:gap-4 max-[768px]:px-[20px]">
           {serviceCards.map((card, index) => (
             <div
               key={index}
-              className="bg-[#FFFFFF] rounded-[26px] p-2 max-[768px]:p-1.5 flex flex-col gap-4 max-[768px]:gap-3.5 overflow-hidden h-[544px] max-[768px]:h-fit w-[391px] max-[768px]:w-[296px] max-[768px]:min-w-[296px]"
+              className="bg-[#FFFFFF] rounded-[26px] p-2 max-[768px]:p-1.5 flex flex-col gap-4 max-[768px]:gap-3.5 overflow-hidden h-[544px] max-[768px]:h-fit w-full max-[768px]:w-[296px] max-[1280px]:w-full max-[768px]:min-w-[296px]"
             >
-              <div className="overflow-hidden rounded-[20px] max-[768px]:rounded-[12px] group/outer cursor-pointer h-[366px] max-[768px]:h-[252px] w-[375px] max-[768px]:w-[284px] bg-gray-100">
+              {/* Image Wrapper */}
+              <div className="overflow-hidden rounded-[20px] max-[768px]:rounded-[12px] group/outer cursor-pointer h-[366px] max-[768px]:h-[252px] w-full bg-gray-100">
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="scale-110 group-hover/outer:scale-100 transition-transform duration-500"
+                  className="w-full h-full object-cover scale-110 group-hover/outer:scale-100 transition-transform duration-500"
                 />
               </div>
 
+              {/* Content */}
               <div className="px-2 flex flex-col gap-2 max-[768px]:gap-1.5">
                 <h3
-                  className="font-semibold text-[22px] max-[768px]:text-[18px] leading-[26px] tracking-normal"
+                  className="font-semibold text-[22px] max-[768px]:text-[18px] max-[1280px]:text-[20px] leading-[26px]"
                   style={{ fontFamily: "Raleway" }}
                 >
                   {card.title}
                 </h3>
+
                 <p
-                  className="text-[16px] leading-[22px] max-[768px]:leading-[16px] max-[768px]:text-[12px] tracking-normal text-[#444] h-[66px]"
-                  style={{ fontFamily: "figtree" }}
+                  className="text-[16px] leading-[22px] max-[768px]:leading-[16px] max-[1280px]:leading-[18px] max-[768px]:text-[12px] max-[1280px]:text-[14px] text-[#444] min-h-[66px]"
+                  style={{ fontFamily: "Figtree" }}
                 >
                   {card.description}
                 </p>
               </div>
 
+              {/* CTA */}
               <div
-                className="px-2 pb-2 flex gap-1.5 items-center text-black hover:text-[#E64949] transition-colors duration-500 overflow-hidden group/inner cursor-pointer"
+                className="px-2 pb-2 flex gap-1.5 items-center text-black hover:text-[#E64949] transition-colors duration-500 group/inner cursor-pointer"
                 onClick={() => navigate("/contact")}
                 style={{ fontFamily: "Figtree" }}
               >
-                <span className="text-base max-[768px]:text-[14px] leading-[22px]">Learn More</span>
+                <span className="text-base max-[768px]:text-[14px] max-[1280px]:text-[14px] leading-[22px]">
+                  Learn More
+                </span>
 
                 <div className="relative w-4 h-4 overflow-hidden">
-                  {/* Arrow 1 */}
                   <ArrowRight className="absolute transition-all duration-500 ease-out translate-x-0 opacity-100 group-hover/inner:translate-x-full group-hover/inner:opacity-0 w-4 h-4" />
-
-                  {/* Arrow 2 */}
                   <ArrowRight className="absolute transition-all duration-500 ease-out -translate-x-full opacity-0 group-hover/inner:translate-x-0 group-hover/inner:opacity-100 w-4 h-4" />
                 </div>
               </div>
             </div>
           ))}
         </div>
-      
       </div>
 
-      <div className="bg-[#E64949] rounded-[26px] py-[26px] flex max-[768px]:flex-col justify-between px-[72px] mx-[75px] max-[768px]:mx-[20px] my-[120px] max-[768px]:my-[60px] max-[768px]:mb-0 max-[768px]:px-[26px]">
-        
-        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
-          <div className="flex gap-[22px] items-center">
-            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
+      <div className="bg-[#E64949] rounded-[26px] py-[26px] flex flex-row items-center gap-[50px] max-[1650px]:gap-[26px] max-[1280px]:gap-[26px] max-[1280px]:flex-col justify-between px-[72px] mx-[75px] max-[768px]:mx-[20px] max-[1280px]:mx-[30px] my-[120px] max-[1280px]:my-[60px] max-[1280px]:mb-0 max-[1280px]:px-[26px]">
+        <div className="flex max-[1280px]:flex-col items-center max-[1280px]:items-center">
+          <div className="flex gap-[22px] max-[1650px]:gap-[12px] items-center">
+            <div className="rounded-full p-[29px] max-[1650px]:p-[20px] max-[1280px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width={ isMobile ? "24" : "32"}
-                height={ isMobile ? "24" : "32"}
+                width={isMobile ? "24" : "32"}
+                height={isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,30 +126,30 @@ export default function OurServices() {
                 />
               </svg>
             </div>
-            <div className="flex flex-col gap-3 max-[768px]:gap-0">
+            <div className="flex flex-col gap-3 max-[1280px]:gap-0">
               <div
-                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
+                className="text-[38px] max-[1650px]:text-[28px] max-[1280px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[1280px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 70+
               </div>
               <div
-                className="text-[28px] max-[768px]:text-[18px] leading-[32px] max-[768px]:leading-[22px] tracking-normal font-medium text-white"
+                className="text-[28px] max-[1650px]:text-[20px] max-[1280px]:text-[18px] leading-[32px] max-[1280px]:leading-[22px] tracking-normal font-medium text-white"
                 style={{ fontFamily: "Raleway" }}
               >
                 Trucks
               </div>
             </div>
           </div>
-          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px" />
         </div>
-        
-        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
-          <div className="flex gap-[22px] items-center max-[768px]:mt-[26px]">
-            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
+        <div className="hidden max-[1280px]:block h-px w-full bg-white" />
+        <div className="block max-[1280px]:hidden w-px bg-white h-[177px]" />
+        <div className="flex max-[1280px]:flex-col items-center max-[1280px]:items-center">
+          <div className="flex gap-[22px] max-[1650px]:gap-[12px] items-center max-[1280px]:mt-[26px]">
+            <div className="rounded-full p-[29px] max-[1650px]:p-[20px] max-[1280px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width={ isMobile ? "24" : "32"}
-                height={ isMobile ? "24" : "32"}
+                width={isMobile ? "24" : "32"}
+                height={isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -191,30 +191,31 @@ export default function OurServices() {
                 </defs>
               </svg>
             </div>
-            <div className="flex flex-col gap-3 max-[768px]:gap-0">
+            <div className="flex flex-col gap-3 max-[1280px]:gap-0">
               <div
-                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
+                className="text-[38px] max-[1650px]:text-[28px] max-[1280px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[1280px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 1000+
               </div>
               <div
-                className="text-[28px] max-[768px]:text-[18px] leading-[32px] max-[768px]:leading-[22px] tracking-normal font-medium text-white"
+                className="text-[28px] max-[1650px]:text-[20px] max-[1280px]:text-[18px] leading-[32px] max-[1280px]:leading-[22px] tracking-normal font-medium text-white"
                 style={{ fontFamily: "Raleway" }}
               >
                 Trailers
               </div>
             </div>
           </div>
-          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px" />
         </div>
-        
-        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
-          <div className="flex gap-[22px] items-center max-[768px]:mt-[26px]">
-            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
+        <div className="hidden max-[1280px]:block h-px w-full bg-white" />
+        <div className="block max-[1280px]:hidden w-px bg-white h-[177px]" />
+
+        <div className="flex max-[1280px]:flex-col items-center max-[1280px]:items-center">
+          <div className="flex gap-[22px] max-[1650px]:gap-[12px] items-center max-[1280px]:mt-[26px]">
+            <div className="rounded-full p-[29px] max-[1650px]:p-[20px] max-[1280px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width={ isMobile ? "24" : "32"}
-                height={ isMobile ? "24" : "32"}
+                width={isMobile ? "24" : "32"}
+                height={isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -235,30 +236,31 @@ export default function OurServices() {
                 />
               </svg>
             </div>
-            <div className="flex flex-col gap-3 max-[768px]:gap-0">
+            <div className="flex flex-col gap-3 max-[1280px]:gap-0">
               <div
-                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
+                className="text-[38px] max-[1650px]:text-[28px] max-[1280px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[1280px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 12
               </div>
               <div
-                className="text-[28px] max-[768px]:text-[18px] leading-[32px] tracking-normal font-medium text-white max-[768px]:leading-[22px]"
+                className="text-[28px] max-[1650px]:text-[20px] max-[1280px]:text-[18px] leading-[32px] tracking-normal font-medium text-white max-[1280px]:leading-[22px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 States Covered
               </div>
             </div>
           </div>
-          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px" />
         </div>
+        <div className="hidden max-[1280px]:block h-px w-full bg-white" />
+        <div className="block max-[1280px]:hidden w-px bg-white h-[177px]" />
 
-        <div className="flex max-[768px]:flex-col gap-[84px] max-[768px]:gap-[26px] items-center max-[768px]:items-start">
-          <div className="flex gap-[22px] items-center max-[768px]:mt-[26px]">
-            <div className="rounded-full p-[29px] max-[768px]:p-[9px] border border-[#FFD7D7]">
+        <div className="flex max-[1280px]:flex-col items-center max-[1280px]:items-center">
+          <div className="flex gap-[22px] max-[1650px]:gap-[12px] items-center max-[1280px]:mt-[26px]">
+            <div className="rounded-full p-[29px] max-[1650px]:p-[20px] max-[1280px]:p-[9px] border border-[#FFD7D7]">
               <svg
-                width={ isMobile ? "24" : "32"}
-                height={ isMobile ? "24" : "32"}
+                width={isMobile ? "24" : "32"}
+                height={isMobile ? "24" : "32"}
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -272,22 +274,22 @@ export default function OurServices() {
                 />
               </svg>
             </div>
-            <div className="flex flex-col gap-3 max-[768px]:gap-0">
+            <div className="flex flex-col gap-3 max-[1280px]:gap-0">
               <div
-                className="text-[38px] max-[768px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[768px]:leading-[32px]"
+                className="text-[38px] max-[1650px]:text-[28px] max-[1280px]:text-[28px] leading-[38px] tracking-normal font-extrabold text-white max-[1280px]:leading-[32px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 1997+
               </div>
               <div
-                className="text-[28px] max-[768px]:text-[18px] leading-[32px] tracking-normal font-medium text-white max-[768px]:leading-[22px]"
+                className="text-[28px] max-[1650px]:text-[20px] max-[1280px]:text-[18px] leading-[32px] tracking-normal font-medium text-white max-[1280px]:leading-[22px]"
                 style={{ fontFamily: "Raleway" }}
               >
                 Established
               </div>
             </div>
           </div>
-          <div className="h-[177px] max-[768px]:w-full max-[768px]:h-px bg-[#ffffff] w-px hidden" />
+          <div className="h-[177px] max-[1280px]:w-full max-[1280px]:h-px bg-[#ffffff] w-px hidden" />
         </div>
       </div>
     </div>

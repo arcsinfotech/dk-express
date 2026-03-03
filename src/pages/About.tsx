@@ -4,6 +4,7 @@ import aboutTruck from "@/assets/images/about-truck.png";
 import aboutTruck2 from "@/assets/images/about-truck2.png";
 import team1 from "@/assets/team-01.png";
 import team3 from "@/assets/team-03.png";
+import teamPlaceholder from "@/assets/team-placeholder.png";
 
 import TimeLine from "@/assets/timeline.svg";
 import TimeLine1 from "@/assets/timeline1.svg"
@@ -15,12 +16,12 @@ const TeamMembers = [
   {
     name: "Daljit Singh",
     role: "President",
-    image: team3,
+    image: teamPlaceholder,
   },
   {
     name: "Sarb Singh",
     role: "Operations Manager",
-    image: team1,
+    image: teamPlaceholder,
   },
 ];
 
