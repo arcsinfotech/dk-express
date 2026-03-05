@@ -1351,7 +1351,6 @@ export default function About() {
       </div>
       <Testimonials />
       <Quote />
-
       <Footer />
     </div>
   );

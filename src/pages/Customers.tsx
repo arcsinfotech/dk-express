@@ -107,9 +107,9 @@ const Customers = () => {
           // whileInView={{ opacity: 1, x: 0 }}
           // viewport={{ once: true }}
           // transition={{ duration: 1.5 }}
-          className="relative z-20"
+          className="relative z-20 w-[60%] max-[1280px]:w-full"
         >
-          <div className="relative w-[705px] max-[1280px]:w-full h-[730px] max-[1280px]:h-fit p-[36px] max-[768px]:p-[16px] max-[1280px]:p-[26px] rounded-[16px] bg-[#01112D] overflow-hidden">
+          <div className="relative w-full max-[1280px]:w-full h-[730px] max-[1280px]:h-fit p-[36px] max-[768px]:p-[16px] max-[1280px]:p-[26px] rounded-[16px] bg-[#01112D] overflow-hidden">
             <div className="w-[494px] h-[494px] rounded-full absolute blur-[80px] top-[-247px] left-[-242px] bg-[#001E50]" />
             <div className="w-[494px] h-[494px] rounded-full absolute blur-[80px] top-[467px] left-[439px] bg-[#001E50]" />
 
@@ -148,7 +148,7 @@ const Customers = () => {
           // whileInView={{ opacity: 1, x: 0 }}
           // viewport={{ once: true }}
           // transition={{ duration: 1.5 }}
-          className="w-full m-2.5 relative z-20"
+          className="max-[1280px]:w-full m-2.5 relative z-20 w-[40%]"
         >
           <form
             className="flex flex-col gap-[24px] w-full"
