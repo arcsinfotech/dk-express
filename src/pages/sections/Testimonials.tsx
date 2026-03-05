@@ -33,7 +33,7 @@ function StarRating({ count }: { count: number }) {
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="w-[672px] max-[768px]:w-[335px] max-[768px]:min-w-[335px] max-[1280px]:w-[459px] max-[1280px]:min-w-[459px] max-h-[340px] max-[768px]:max-h-fit bg-[#ffffff] rounded-[16px] box-shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-[32px_28px] max-[768px]:p-[14px] flex flex-col justify-start gap-[26px] max-[768px]:gap-3">
+    <div className="w-[672px] max-[768px]:w-[335px] max-[768px]:min-w-[335px] max-[1280px]:w-[459px] max-[1280px]:min-w-[459px] max-h-[340px] bg-[#ffffff] rounded-[16px] box-shadow-[0_4px_24px_rgba(0,0,0,0.08)] p-[32px_28px] max-[768px]:p-[14px] flex flex-col justify-start gap-[26px] max-[768px]:gap-3">
       {/* Header */}
       <div
         className="flex items-center gap-3.5"
@@ -93,16 +93,14 @@ export default function Testimonials() {
     {
       name: "Samantha Gallaty",
       tag: "Customer",
-      quote:
-        "Excellent wash.",
+      quote: "Excellent wash.",
       image: testimonial2,
       stars: 5,
     },
     {
       name: "fuzzy dowell",
       tag: "Customer",
-      quote:
-        "Good so far.",
+      quote: "Good so far.",
       image: testimonial3,
       stars: 5,
     },

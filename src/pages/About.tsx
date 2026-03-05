@@ -1322,7 +1322,7 @@ export default function About() {
                       </defs>
                     </svg>
                     <div
-                      className={`absolute w-[219px] top-[22px] left-[37px] h-[322px] z-10 border border-white/54 rounded-[3600px] ${index % 2 !== 0 ? "bg-[linear-gradient(180deg,#FFFFFF1A_0%,#407BFF1A_100%)]" : "bg-[linear-gradient(139.31deg,#F9ECEC_2.19%,#F0C0C0_95.68%)]"}`}
+                      className={`absolute w-[219px] top-[22px] left-[37px] h-[322px] z-10 border border-white/54 rounded-[3600px] ${index % 2 !== 0 ? "bg-[linear-gradient(139.31deg,#E8F1FF_2.19%,#B5CEF6_95.68%)]" : "bg-[linear-gradient(139.31deg,#F9ECEC_2.19%,#F0C0C0_95.68%)]"}`}
                     />
                     <div className="relative z-20 h-full w-full flex items-end justify-center">
                       <img
