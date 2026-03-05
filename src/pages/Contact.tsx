@@ -6,8 +6,7 @@ import Quote from "./sections/Quote";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Contact = () => {
-
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -41,37 +40,34 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="bg-[#F4F5F7] h-full px-[135px] py-[120px] max-[768px]:px-[20px] max-[768px]:py-[60px] relative z-10 max-[768px]:text-[14px] max-[768px]:overflow-hidden">
+      <div className="bg-[#F4F5F7] h-full px-[135px] py-[120px] max-[768px]:px-[20px] max-[768px]:py-[60px] max-[1280px]:px-[30px] max-[1280px]:py-[80px] relative z-10 max-[768px]:text-[14px] overflow-hidden">
         <div className="absolute top-[249px] left-[203px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
         <div className="absolute top-[209px] left-[693px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
         <div className="absolute top-[206px] left-[1529px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
         <div className="absolute top-[610px] left-[1024px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
         <div className="absolute top-[610px] left-[116px] w-[186px] h-[186px] rounded-full bg-[#E64949] blur-[180px] z-0" />
-      
-        
-        <div className="flex flex-row max-[768px]:flex-col-reverse gap-4 relative z-10">
+
+        <div className="flex flex-row max-[1280px]:flex-col-reverse gap-4 relative z-10">
           <motion.div
-            initial={ isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={ isMobile ? { duration: 0 } : { duration: 1.5 }}
-            className="bg-white rounded-[26px] max-[768px]:rounded-[16px] w-[65%] max-[768px]:w-full relative z-20"
+            transition={isMobile ? { duration: 0 } : { duration: 1.5 }}
+            className="bg-white rounded-[26px] max-[1280px]:rounded-[16px] w-[65%] max-[1280px]:w-full relative z-20"
           >
-            <div className="flex flex-col gap-8 p-[26px] max-[768px]:p-[12px]">
-              <div className="flex flex-col gap-4 ">
-                
+            <div className="flex flex-col gap-8 max-[1280px]:gap-[24px] max-[768px]:gap-[16px] p-[26px] max-[768px]:p-[12px]">
+              <div className="flex flex-col gap-4 max-[1280px]:gap-[36px] ">
                 <div
-                  className="font-semibold text-[28px] max-[768px]:text-[20px] leading-[36px] tracking-normal"
+                  className="font-semibold text-[28px] max-[768px]:text-[20px] max-[1280px]:text-[24px] leading-[36px] tracking-normal"
                   style={{ fontFamily: "Raleway" }}
                 >
                   Contact Information
                 </div>
-                
-                <div className="bg-[#D2D2D2] h-px" />
-                
-                <div className="flex flex-row max-[768px]:flex-col gap-[23px]">
-                  
-                  <div className="flex flex-row gap-3 justify-center max-[768px]:justify-start items-center">
+
+                <div className="bg-[#D2D2D2] h-px max-[1280px]:hidden block" />
+
+                <div className="flex flex-row max-[1280px]:flex-col gap-[23px] max-[1280px]:gap-[16px]">
+                  <div className="flex flex-row gap-3 justify-center max-[1280px]:justify-start items-center">
                     <div className="bg-[#E649491A] rounded-[12px] p-[11px] h-[42px] w-[42px]">
                       <svg
                         width="20"
@@ -111,10 +107,11 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
-                  
-                  <div className="bg-[#D2D2D2] w-px max-[768px]:hidden" />
-                  
-                  <div className="flex flex-row gap-3 justify-center max-[768px]:justify-start items-center">
+
+                  <div className="bg-[#D2D2D2] w-px max-[1280px]:hidden block" />
+                  <div className="bg-[#D2D2D2] h-px max-[1280px]:block hidden" />
+
+                  <div className="flex flex-row gap-3 justify-center max-[1280px]:justify-start items-center">
                     <div className="bg-[#E649491A] rounded-[12px] p-[11px] h-[42px] w-[42px]">
                       <svg
                         width="20"
@@ -148,10 +145,11 @@ const Contact = () => {
                       </a>
                     </div>
                   </div>
-                  
-                  <div className="bg-[#D2D2D2] w-px max-[768px]:hidden" />
-                  
-                  <div className="flex flex-row gap-3 justify-center max-[768px]:justify-start items-center w-max">
+
+                  <div className="bg-[#D2D2D2] w-px max-[1280px]:hidden block" />
+                  <div className="bg-[#D2D2D2] h-px max-[1280px]:block hidden" />
+
+                  <div className="flex flex-row gap-3 justify-center max-[1280px]:justify-start items-center w-max">
                     <div className="bg-[#E649491A] rounded-[12px] p-[11px] h-[42px] w-[42px]">
                       <svg
                         width="20"
@@ -185,10 +183,11 @@ const Contact = () => {
                       </a>
                     </div>
                   </div>
-                  
-                  <div className="bg-[#D2D2D2] w-px max-[768px]:hidden" />
-                  
-                  <div className="flex flex-row gap-3 justify-center max-[768px]:justify-start items-center">
+
+                  <div className="bg-[#D2D2D2] w-px max-[1280px]:hidden block" />
+                  <div className="bg-[#D2D2D2] h-px max-[1280px]:block hidden" />
+
+                  <div className="flex flex-row gap-3 justify-center max-[1280px]:justify-start items-center">
                     <div className="bg-[#E649491A] rounded-[12px] p-[11px] h-[42px] w-[42px]">
                       <svg
                         width="20"
@@ -231,7 +230,7 @@ const Contact = () => {
                 </div>
               </div>
               <iframe
-                className="w-full h-[479px] max-[768px]:h-[155px] max-[768px]:rounded-[12px]"
+                className="w-full h-[479px] max-[768px]:h-[155px] max-[1280px]:h-[242px] max-[768px]:rounded-[12px]"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7283.572319518824!2d-121.32580297800735!3d37.931591098936664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090125da067f1af%3A0x94b8ebba9542e078!2sDK%20EXPRESS%20CARGO%20INC!5e0!3m2!1sen!2sin!4v1771838581677!5m2!1sen!2sin"
                 style={{ border: 0 }}
                 allowFullScreen
@@ -241,17 +240,17 @@ const Contact = () => {
               />
             </div>
           </motion.div>
-          
+
           <motion.div
-            initial={ isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+            initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={ isMobile ? { duration: 0 } : { duration: 1.5 }}
-            className="bg-white rounded-[26px] w-[35%] max-[768px]:rounded-[16px] max-[768px]:w-full relative z-20"
+            transition={isMobile ? { duration: 0 } : { duration: 1.5 }}
+            className="bg-white rounded-[26px] w-[35%] max-[1280px]:rounded-[16px] max-[1280px]:w-full relative z-20"
           >
-            <div className="py-9 px-6.5 max-[768px]:p-4 flex flex-col gap-[26px]">
+            <div className="py-9 px-6.5 max-[768px]:p-4 max-[1280px]:p-6 flex flex-col gap-[26px] max-[1280px]:gap-[32px]">
               <div
-                className="font-semibold text-[28px] max-[768px]:text-[20px] leading-[36px] tracking-normal"
+                className="font-semibold text-[28px] max-[768px]:text-[20px] max-[1280px]:text-[24px] leading-[36px] tracking-normal"
                 style={{ fontFamily: "Raleway" }}
               >
                 Send Us a Message
@@ -261,12 +260,11 @@ const Contact = () => {
                 onSubmit={handleSubmit}
               >
                 <div className="flex flex-col gap-6">
-                  
-                  <div className="flex flex-row max-[768px]:flex-col gap-[11px] max-[768px]:gap-[24px] w-full">
-                    <div className="flex flex-col gap-3 w-1/2 max-[768px]:w-full">
+                  <div className="flex flex-row max-[768px]:flex-col gap-[11px] max-[768px]:gap-[24px] max-[1280px]:gap-[16px] w-full">
+                    <div className="flex flex-col gap-3 max-[1280px]:gap-2 w-1/2 max-[768px]:w-full">
                       <label
                         htmlFor="company-name"
-                        className="text-sm max-[768px]:text-[13px] max-[768px]:font-semibold leading-[16px] tracking-normal"
+                        className="text-sm max-[768px]:text-[13px] max-[1280px]:text-[14px] max-[768px]:font-semibold max-[1280px]:font-medium leading-[16px] tracking-normal"
                         style={{ fontFamily: "Figtree" }}
                       >
                         Company Name
@@ -280,10 +278,10 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    <div className="flex flex-col gap-3 w-1/2 max-[768px]:w-full">
+                    <div className="flex flex-col gap-3 max-[1280px]:gap-2 w-1/2 max-[768px]:w-full">
                       <label
                         htmlFor="email"
-                        className="text-sm max-[768px]:text-[12px] leading-[16px] tracking-normal"
+                        className="text-sm max-[768px]:text-[13px] max-[1280px]:text-[14px] max-[768px]:font-semibold max-[1280px]:font-medium leading-[16px] tracking-normal"
                         style={{ fontFamily: "Figtree" }}
                       >
                         Email
@@ -298,47 +296,48 @@ const Contact = () => {
                       />
                     </div>
                   </div>
+                  <div className="flex flex-col max-[1280px]:flex-row max-[768px]:flex-col gap-[11px] max-[768px]:gap-[24px] max-[1280px]:gap-[16px] w-full">
+                    <div className="flex flex-col gap-3 max-[1280px]:gap-2 w-full max-[1280px]:w-1/2 max-[768px]:w-full">
+                      <label
+                        htmlFor="phone"
+                        className="text-sm max-[768px]:text-[13px] max-[1280px]:text-[14px] max-[768px]:font-semibold max-[1280px]:font-medium leading-[16px] tracking-normal"
+                        style={{ fontFamily: "Figtree" }}
+                      >
+                        Phone
+                      </label>
+                      <input
+                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-[768px]:text-[14px]"
+                        type="number"
+                        id="phone"
+                        name="Phone"
+                        placeholder="Your phone number"
+                        required
+                      />
+                    </div>
 
-                  <div className="flex flex-col gap-3 w-full">
-                    <label
-                      htmlFor="phone"
-                      className="text-sm max-[768px]:text-[12px] leading-[16px] tracking-normal"
-                      style={{ fontFamily: "Figtree" }}
-                    >
-                      Phone
-                    </label>
-                    <input
-                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-[768px]:text-[14px]"
-                      type="number"
-                      id="phone"
-                      name="Phone"
-                      placeholder="Your phone number"
-                      required
-                    />
+                    <div className="flex flex-col gap-3 max-[1280px]:gap-2 w-full max-[1280px]:w-1/2 max-[768px]:w-full">
+                      <label
+                        htmlFor="subject"
+                        className="text-sm max-[768px]:text-[13px] max-[1280px]:text-[14px] max-[768px]:font-semibold max-[1280px]:font-medium leading-[16px] tracking-normal"
+                        style={{ fontFamily: "Figtree" }}
+                      >
+                        Subject
+                      </label>
+                      <input
+                        className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-[768px]:text-[14px]"
+                        type="text"
+                        id="subject"
+                        name="Subject"
+                        placeholder="Subject"
+                        required
+                      />
+                    </div>
                   </div>
 
-                  <div className="flex flex-col gap-3 w-full">
-                    <label
-                      htmlFor="subject"
-                      className="text-sm max-[768px]:text-[12px] leading-[16px] tracking-normal"
-                      style={{ fontFamily: "Figtree" }}
-                    >
-                      Subject
-                    </label>
-                    <input
-                      className="h-[52px] rounded-[8px] px-3.5 py-4 bg-[#F4F5F7] border-none outline-none placeholder:text-base max-[768px]:placeholder:text-[14px] placeholder:leading-[20px] placeholder:text-[#a2a2a2] max-[768px]:text-[14px]"
-                      type="text"
-                      id="subject"
-                      name="Subject"
-                      placeholder="Subject"
-                      required
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-3 col-span-2">
+                  <div className="flex flex-col gap-3 max-[1280px]:gap-2 col-span-2">
                     <label
                       htmlFor="message"
-                      className="text-sm max-[768px]:text-[12px] leading-[16px] tracking-normal"
+                      className="text-sm max-[768px]:text-[13px] max-[1280px]:text-[14px] max-[768px]:font-semibold max-[1280px]:font-medium leading-[16px] tracking-normal"
                       style={{ fontFamily: "Figtree" }}
                     >
                       Message
