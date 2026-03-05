@@ -109,7 +109,7 @@ const Customers = () => {
           // transition={{ duration: 1.5 }}
           className="relative z-20"
         >
-          <div className="relative w-[705px] max-[1280px]:w-full h-[730px] max-[768px]:h-fit p-[36px] max-[768px]:p-[16px] max-[1280px]:p-[26px] rounded-[16px] bg-[#01112D] overflow-hidden">
+          <div className="relative w-[705px] max-[1280px]:w-full h-[730px] max-[1280px]:h-fit p-[36px] max-[768px]:p-[16px] max-[1280px]:p-[26px] rounded-[16px] bg-[#01112D] overflow-hidden">
             <div className="w-[494px] h-[494px] rounded-full absolute blur-[80px] top-[-247px] left-[-242px] bg-[#001E50]" />
             <div className="w-[494px] h-[494px] rounded-full absolute blur-[80px] top-[467px] left-[439px] bg-[#001E50]" />
 
@@ -315,7 +315,7 @@ const Customers = () => {
               </div>
             </div>
             <button
-              className={`px-4 w-fit py-3.5 max-[768px]:py-[10px] bg-[#E64949] text-white text-base max-[768px]:text-[14px] leading-[14px] max-[768px]:leading-[16px] font-medium rounded-[36px] cursor-pointer ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+              className={`px-4 w-fit py-3.5 max-[768px]:py-[10px] bg-[#E64949] text-white text-base max-[1280px]:text-[14px] leading-[14px] max-[768px]:leading-[16px] font-medium rounded-[36px] cursor-pointer ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
               style={{ fontFamily: "Outfit" }}
               type="submit"
               disabled={isSubmitting}
