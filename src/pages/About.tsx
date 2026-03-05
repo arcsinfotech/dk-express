@@ -8,6 +8,7 @@ import teamPlaceholder from "@/assets/team-placeholder.png";
 
 import TimeLine from "@/assets/timeline.svg";
 import TimeLine1 from "@/assets/timeline1.svg";
+import TimeLineTab from "@/assets/timeline-tab.svg";
 import Testimonials from "./sections/Testimonials";
 import Quote from "./sections/Quote";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -633,16 +634,16 @@ export default function About() {
         </div>
       </div>
 
-      <div className="bg-[#F4F5F7] relative py-[120px] max-[768px]:py-0 max-[1280px]:py-[80px] flex flex-col gap-[83px]">
+      <div className="bg-[#F4F5F7] relative py-[120px] max-[768px]:py-0 max-[1280px]:py-[80px] flex flex-col gap-[83px] max-[1280px]:gap-[60px]">
         <div className="flex flex-col items-center justify-center gap-3 max-[768px]:absolute max-[768px]:top-[60px] max-[768px]:w-full">
           <div
-            className="bg-[#0000000A] rounded-[36px] text-[18px] max-[768px]:text-[12px] leading-[22px] tracking-normal py-2 px-4 w-fit"
+            className="bg-[#0000000A] rounded-[36px] text-[18px] max-[768px]:text-[12px] max-[1280px]:text-[14px] leading-[22px] tracking-normal py-2 px-4 w-fit"
             style={{ fontFamily: "Outfit" }}
           >
             Our Journey
           </div>
           <div
-            className="text-[54px] leading-[58px] max-[768px]:text-[32px] max-[768px]:leading-[38px] font-semibold tracking-normal flex gap-3"
+            className="text-[54px] leading-[58px] max-[768px]:text-[32px] max-[768px]:leading-[38px] max-[1280px]:text-[48px] max-[1280px]:leading-[54px] font-semibold tracking-normal flex gap-3"
             style={{ fontFamily: "Raleway" }}
           >
             <span className="text-[#262626]">Company</span>
@@ -651,9 +652,19 @@ export default function About() {
         </div>
 
         <img
-          src={isMobile ? TimeLine1 : TimeLine}
+          src={TimeLine}
           alt="Timeline"
-          className="max-[768px]:w-full max-[768px]:h-auto"
+          className="block max-[1280px]:hidden"
+        />
+        <img
+          src={TimeLineTab}
+          alt="Timeline"
+          className="w-full h-auto hidden max-[1280px]:block max-[768px]:hidden"
+        />
+        <img
+          src={TimeLine1}
+          alt="Timeline"
+          className="w-full h-auto hidden max-[768px]:block"
         />
       </div>
 
