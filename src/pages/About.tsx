@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import Footer from "./sections/Footer";
 import aboutTruck from "@/assets/images/about-truck.png";
 import aboutTruck2 from "@/assets/images/about-truck2.png";
-import team1 from "@/assets/team-01.png";
-import team3 from "@/assets/team-03.png";
+// import team1 from "@/assets/team-01.png";
+// import team3 from "@/assets/team-03.png";
 import teamPlaceholder from "@/assets/team-placeholder.png";
 
 import TimeLine from "@/assets/timeline.svg";
-import TimeLine1 from "@/assets/timeline1.svg"
+import TimeLine1 from "@/assets/timeline1.svg";
 import Testimonials from "./sections/Testimonials";
 import Quote from "./sections/Quote";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -26,25 +26,29 @@ const TeamMembers = [
 ];
 
 export default function About() {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   return (
     <div className="max-[768px]:overflow-hidden">
       <div className="bg-[#F2F2F2] flex justify-center items-center w-full">
-        <div className="relative flex max-[768px]:flex-col justify-between items-center bg-[#FFFFFF] rounded-[26px] w-full gap-[38px] max-[768px]:gap-[36px] mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] p-[12px] z-10 overflow-hidden">
-          <div className="bg-[#E64949] max-[768px]:hidden rounded-full absolute w-[168px] h-[168px] top-[-44px] left-[-38px] blur-[120px] z-0" />
-          <div className="bg-[#E64949] max-[768px]:hidden rounded-full absolute w-[168px] h-[168px] top-[344px] left-[376px] blur-[120px] z-0" />
-          <div className="bg-[#E64949] max-[768px]:hidden rounded-full absolute w-[168px] h-[168px] top-[-52px] left-[714px] blur-[120px] z-0" />
-          <div className="bg-[#E64949] max-[768px]:block hidden rounded-full absolute w-[120px] h-[120px] top-[47px] left-[283px] blur-[60px] z-0" />
-          <div className="bg-[#ffffff] max-[768px]:block hidden rounded-full absolute w-[449px] h-[449px] top-[42px] left-[-108px] blur-[120px] z-0" />
+        <div className="relative flex max-[1280px]:flex-col justify-between items-center bg-[#FFFFFF] rounded-[26px] w-full gap-[38px] max-[768px]:gap-[36px] mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] max-[1280px]:mx-[30px] max-[1280px]:my-[80px] p-[12px] z-10 overflow-hidden">
+          <div className="bg-[#E64949] max-[1280px]:hidden rounded-full absolute w-[168px] h-[168px] top-[-44px] left-[-38px] blur-[120px] z-0" />
+          <div className="bg-[#E64949] max-[1280px]:hidden rounded-full absolute w-[168px] h-[168px] top-[344px] left-[376px] blur-[120px] z-0" />
+          <div className="bg-[#E64949] max-[1280px]:hidden rounded-full absolute w-[168px] h-[168px] top-[-52px] left-[714px] blur-[120px] z-0" />
+          <div className="bg-[#E64949] max-[1280px]:block hidden rounded-full absolute w-[120px] h-[120px] max-[768px]:top-[47px] max-[768px]:left-[283px] max-[1280px]:top-[275px] max-[1280px]:left-[1135px] blur-[60px] z-0" />
+          <div className="bg-[#ffffff] max-[1280px]:block hidden rounded-full absolute w-[449px] h-[449px] max-[768px]:top-[42px] max-[768px]:left-[-108px] max-[1280px]:top-[257px] max-[1280px]:left-[131px] blur-[120px] z-0" />
           <div
             // initial={{ opacity: 0, x: -40 }}
             // whileInView={{ opacity: 1, x: 0 }}
             // viewport={{ once: true }}
             // transition={{ duration: 1.5 }}
-            className="h-full relative z-20"
+            className="w-full relative z-20"
           >
-            <div className="w-[805px] h-[409px] max-[768px]:w-[319px] max-[768px]:h-[162px] bg-gray-200 rounded-[16px]">
-              <img src={aboutTruck} alt="" />
+            <div className="w-full h-[409px] max-[1280px]:h-[340px] max-[768px]:h-[162px] bg-gray-200 rounded-[16px] overflow-hidden">
+              <img
+                src={aboutTruck}
+                alt="About Truck"
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
           <div
@@ -52,7 +56,7 @@ export default function About() {
             // whileInView={{ opacity: 1, x: 0 }}
             // viewport={{ once: true }}
             // transition={{ duration: 1.5 }}
-            className="h-full flex flex-col gap-4 relative justify-center items-center w-full max-w-[774px] z-20"
+            className="h-full flex flex-col gap-4 relative justify-center items-center w-full max-w-[774px] max-[1280px]:max-w-full z-10"
           >
             <svg
               width="774"
@@ -60,7 +64,7 @@ export default function About() {
               viewBox="0 0 774 432"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute top-[-155px] left-[-55px] z-0"
+              className="absolute top-[-155px] left-[-55px] max-[1280px]:top-0 max-[1280px]:left-[415px] z-0"
             >
               <g clipPath="url(#clip0_372_2625)">
                 <path
@@ -491,16 +495,16 @@ export default function About() {
               </defs>
             </svg>
             <div className="bg-white rounded-full absolute max-w-[693px] h-[693px] top-[-141px] left-[-115px] z-2 blur-[120px]" />
-            <div className="relative z-10 max-w-[499px]">
+            <div className="relative z-10 max-w-[499px] max-[1280px]:max-w-full max-[1280px]:gap-[12px] flex flex-col gap-4">
               <div className="flex gap-2">
                 <span
-                  className="text-[54px] max-[768px]:text-[32px] font-semibold text-[#262626] leading-[58px] max-[768px]:leading-[38px]"
+                  className="text-[54px] max-[768px]:text-[32px] max-[1280px]:text-[48px] max-[1280px]:leading-[54px] font-semibold text-[#262626] leading-[58px] max-[768px]:leading-[38px]"
                   style={{ fontFamily: "Raleway" }}
                 >
                   Our
                 </span>
                 <span
-                  className="text-[54px] max-[768px]:text-[32px] font-semibold text-[#E64949] leading-[58px] max-[768px]:leading-[38px]"
+                  className="text-[54px] max-[768px]:text-[32px] max-[1280px]:text-[48px] max-[1280px]:leading-[54px] font-semibold text-[#E64949] leading-[58px] max-[768px]:leading-[38px]"
                   style={{ fontFamily: "Raleway" }}
                 >
                   Mission
@@ -517,17 +521,18 @@ export default function About() {
         </div>
       </div>
 
-      <div className="bg-white relative z-10">
-        <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[89px] left-[1066px] z-0 blur-[220px]" />
-        <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[460px] left-[1506px] z-0 blur-[220px]" />
-        <div className="bg-[#00112D] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] left-[-235px] top-[16px] z-0 blur-[220px]" />
+      <div className="bg-white relative z-10 overflow-hidden">
+        <div className="bg-[#00112D] max-[1280px]:hidden rounded-full absolute w-[236px] h-[236px] top-[89px] left-[1066px] z-0 blur-[220px]" />
+        <div className="bg-[#00112D] max-[1280px]:hidden rounded-full absolute w-[236px] h-[236px] top-[460px] left-[1506px] z-0 blur-[220px]" />
+        <div className="bg-[#00112D] max-[1280px]:hidden rounded-full absolute w-[236px] h-[236px] left-[-235px] top-[16px] z-0 blur-[220px]" />
+        <div className="bg-[#00112D] max-[1280px]:block rounded-full absolute w-[313px] h-[313px] left-[228px] top-[706px] z-0 blur-[220px]" />
         <svg
           width="1920"
           height="673"
           viewBox="0 0 1920 673"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute z-10 right-0 bottom-[95px]"
+          className="absolute z-10 right-0 bottom-[95px] max-[1280px]:hidden"
         >
           <path
             d="M-112 556.321C-55.1667 486.154 98.3 365.321 257.5 443.321C456.5 540.821 551.5 739.82 823.5 609.32C1095.5 478.82 970 277.821 1206.5 273.321C1443 268.821 1423.29 94.6317 1522 50.8185C1611 11.3171 1777.5 0.82056 1843.5 73.8206C1909.5 146.821 1786 312.819 1976 343.819"
@@ -535,23 +540,23 @@ export default function About() {
             strokeWidth="40"
           />
         </svg>
-        <div className="relative z-10 mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] flex max-[768px]:flex-col gap-[139px] max-[768px]:gap-[16px]">
+        <div className="relative z-10 mx-[135px] my-[120px] max-[768px]:mx-[20px] max-[768px]:my-[60px] max-[1280px]:mx-[30px] max-[1280px]:my-[80px] flex max-[1280px]:flex-col gap-[50px] max-[768px]:gap-[16px] max-[1280px]:gap-[47px]">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="flex flex-col gap-[26px] max-[768px]:gap-[14px] relative z-20"
+            className="flex flex-col gap-[26px] max-[768px]:gap-[14px] max-[1280px]:gap-[12px] relative z-20 w-[60%] max-[1280px]:w-full"
           >
             <div
-              className="text-[56px] max-[768px]:text-[32px] leading-[58px] max-[768px]:leading-[38px] font-semibold tracking-normal flex gap-3"
+              className="text-[56px] max-[768px]:text-[32px] max-[1280px]:text-[48px] leading-[58px] max-[768px]:leading-[38px] max-[1280px]:leading-[54px] font-semibold tracking-normal flex gap-3"
               style={{ fontFamily: "Raleway" }}
             >
               <span className="text-[#262626]">About</span>
               <span className="text-[#E64949]">DK Express</span>
             </div>
             <div
-              className="text-[18px] max-[768px]:text-[14px] leading-[22px] max-[768px]:leading-[20px] tracking-normal text-[#545454]"
+              className="text-[18px] max-[768px]:text-[14px] max-[1280px]:text-[16px] leading-[22px] max-[768px]:leading-[20px] max-[1280px]:leading-[22px] tracking-normal text-[#545454]"
               style={{ fontFamily: "Raleway" }}
             >
               DK Express is a family-owned and operated transportation company
@@ -565,7 +570,7 @@ export default function About() {
                 <div className="bg-[#B60001] max-[768px]:hidden rounded-full absolute w-[236px] h-[236px] top-[135px] left-[-193px] z-10 blur-[220px]" />
                 <div className="bg-[#00112D] max-[768px]:block hidden rounded-full absolute w-[100px] h-[100px] top-[45px] left-[276px] z-10 blur-[90px]" />
                 <div className="bg-[#B60001] max-[768px]:block hidden rounded-full absolute w-[100px] h-[100px] top-[145px] left-[-58px] z-10 blur-[90px]" />
-                <div className="relative flex flex-col gap-[12px] bg-white p-[26px] ">
+                <div className="relative flex flex-col gap-[12px] bg-white p-[26px] max-[1280px]:p-[16px] ">
                   <div
                     className="text-[20px] max-[768px]:text-[18px] leading-[26px] max-[768px]:leading-[24px] font-semibold text-[#262626]"
                     style={{ fontFamily: "Raleway" }}
@@ -573,7 +578,7 @@ export default function About() {
                     Refrigerated or Dry, We’ve Got You Covered
                   </div>
                   <div
-                    className="text-lg max-[768px]:text-[14px] leading-[22px] max-[768px]:leading-[20px] text-[#545454]"
+                    className="text-lg max-[768px]:text-[14px] max-[1280px]:text-[16px] leading-[22px] max-[768px]:leading-[20px] text-[#545454]"
                     style={{ fontFamily: "Figtree" }}
                   >
                     We specialize in both refrigerated and dry freight,
@@ -598,7 +603,7 @@ export default function About() {
                     Where Service Meets Commitment
                   </div>
                   <div
-                    className="text-lg max-[768px]:text-[14px] leading-[22px] max-[768px]:leading-[20px] text-[#545454]"
+                    className="text-lg max-[768px]:text-[14px] max-[1280px]:text-[16px] leading-[22px] max-[768px]:leading-[20px] text-[#545454]"
                     style={{ fontFamily: "Figtree" }}
                   >
                     At DK Express, we believe in treating every customer like
@@ -615,16 +620,20 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="bg-[#FFFFFF] rounded-[26px] p-3"
+            className="bg-[#FFFFFF] rounded-[26px] p-3 w-[40%] max-[1280px]:w-full"
           >
-            <div className="w-[654px] h-[638px] max-[768px]:w-full max-[768px]:h-full">
-              <img src={aboutTruck2} alt="" />
+            <div className="w-full h-full max-[768px]:w-full max-[768px]:h-full max-[1280px]:w-full max-[1280px]:h-full">
+              <img
+                src={aboutTruck2}
+                alt=""
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>
       </div>
 
-      <div className="bg-[#F4F5F7] relative py-[120px] max-[768px]:py-0 flex flex-col gap-[83px]">
+      <div className="bg-[#F4F5F7] relative py-[120px] max-[768px]:py-0 max-[1280px]:py-[80px] flex flex-col gap-[83px]">
         <div className="flex flex-col items-center justify-center gap-3 max-[768px]:absolute max-[768px]:top-[60px] max-[768px]:w-full">
           <div
             className="bg-[#0000000A] rounded-[36px] text-[18px] max-[768px]:text-[12px] leading-[22px] tracking-normal py-2 px-4 w-fit"
@@ -641,11 +650,15 @@ export default function About() {
           </div>
         </div>
 
-        <img src={isMobile ? TimeLine1 : TimeLine} alt="Timeline" className="max-[768px]:w-full max-[768px]:h-auto" />
+        <img
+          src={isMobile ? TimeLine1 : TimeLine}
+          alt="Timeline"
+          className="max-[768px]:w-full max-[768px]:h-auto"
+        />
       </div>
 
       <div className="bg-white">
-        <div className="py-[120px] px-[135px] max-[768px]:px-0 max-[768px]:pt-[200px] max-[768px]:pb-0 bg-[linear-gradient(to_bottom,#00112D_50%,#FFFFFF_50%)] relative overflow-hidden">
+        <div className="py-[120px] px-[135px] max-[768px]:px-0 max-[768px]:pt-[200px] max-[768px]:pb-0 max-[1280px]:px-0 max-[1280px]:pt-[216px] max-[1280px]:pb-0 bg-[linear-gradient(to_bottom,#00112D_50%,#FFFFFF_50%)] relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1/2 overflow-hidden pointer-events-none">
             <svg
               width="387"
@@ -653,7 +666,7 @@ export default function About() {
               viewBox="0 0 387 368"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="top-[-7px] left-[204px] absolute h-full"
+              className="top-[-7px] left-[204px] max-[1280px]:left-0 absolute h-full"
             >
               <path
                 d="M16.8359 -7C20.8359 21.6667 39.9359 78.9 84.3359 78.5C139.836 78 233.336 67 231.836 140.5C230.336 214 23.8359 188.5 23.8359 306.5C23.8359 356 64.3359 387 179.336 370.5C294.336 354 229.836 223.5 284.836 182C328.836 148.8 360.836 184.5 371.336 206.5"
@@ -662,17 +675,17 @@ export default function About() {
                 strokeWidth="34"
               />
             </svg>
-            <div className="w-[494px] h-[494px] bg-[#001E50] top-[-48px] left-[330px] absolute blur-[100px] rounded-full" />
+            <div className="w-[494px] h-[494px] bg-[#001E50] top-[-48px] left-[330px] max-[1280px]:left-1/2 absolute blur-[100px] rounded-full" />
             <div className="w-[494px] h-[494px] bg-[#001E50] top-[151px] left-[1552px] absolute blur-[100px] rounded-full" />
-            <div className="flex flex-col gap-3 absolute top-[120px] max-[768px]:top-[60px] max-[768px]:left-0 left-[144px] max-[768px]:w-full">
+            <div className="flex flex-col gap-3 absolute top-[120px] max-[1280px]:top-[60px] max-[1280px]:left-0 left-[144px] max-[1280px]:w-full">
               <div
-                className="bg-[#FFFFFF14] text-white px-4 py-2 text-lg max-[768px]:text-[10px] leading-[22px] rounded-[36px] w-fit max-[768px]:self-center"
+                className="bg-[#FFFFFF14] text-white px-4 py-2 text-lg max-[768px]:text-[10px] max-[1280px]:text-[14px] leading-[22px] rounded-[36px] w-fit max-[1280px]:self-center"
                 style={{ fontFamily: "Outfit" }}
               >
                 Leadership
               </div>
               <div
-                className="flex flex-row gap-2 text-[54px] max-[768px]:text-[32px] leading-[58px] font-semibold max-[768px]:self-center"
+                className="flex flex-row gap-2 text-[54px] max-[768px]:text-[32px] max-[1280px]:text-[48px] leading-[58px] font-semibold max-[1280px]:self-center"
                 style={{ fontFamily: "Raleway" }}
               >
                 <span className="text-white">Our</span>
@@ -680,18 +693,18 @@ export default function About() {
               </div>
             </div>
           </div>
-          
+
           <motion.div
             initial={isMobile ? { opacity: 1, x: 0 } : { opacity: 0.5, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={ isMobile ? { duration: 0 } : { duration: 1.5 }}
+            transition={isMobile ? { duration: 0 } : { duration: 1.5 }}
             className="relative z-20"
           >
-            <div className="flex gap-6.5 justify-end max-[768px]:justify-start relative z-10 max-[768px]:overflow-scroll no-scrollbar w-full max-[768px]:px-[20px] max-[768px]:pb-[60px]">
+            <div className="flex gap-6.5 justify-end max-[768px]:justify-start max-[1280px]:justify-center relative z-10 max-[1280px]:overflow-scroll no-scrollbar w-full max-[1280px]:px-[20px] max-[1280px]:pb-[60px]">
               {TeamMembers.map((member, index) => (
                 <div
-                  className="h-[430px] max-[768px]:h-fit min-w-[293px] max-[768px]:w-full rounded-[26px] max-[768px]:rounded-[16px] overflow-hidden shadow-[0_22px_49.8px_rgba(0,0,0,0.12)]"
+                  className="h-[430px] max-[768px]:h-fit min-w-[293px] rounded-[26px] max-[768px]:rounded-[16px] overflow-hidden shadow-[0_22px_49.8px_rgba(0,0,0,0.12)]"
                   key={index}
                 >
                   <div
@@ -1323,7 +1336,9 @@ export default function About() {
                     className="flex flex-col gap-2 px-[21px] py-4 text-lg leading-[20px] tracking-normal"
                     style={{ fontFamily: "Raleway" }}
                   >
-                    <div className="font-semibold max-[768px]:text-[12px] max-[768px]:leading-[14px]">{member.role}</div>
+                    <div className="font-semibold max-[768px]:text-[12px] max-[768px]:leading-[14px]">
+                      {member.role}
+                    </div>
                     <div className="max-[768px]:text-[14px] max-[768px]:leading-[14px]">
                       {member.name}
                     </div>
@@ -1334,8 +1349,8 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-      <Testimonials />
-      <Quote />
+      {/* <Testimonials />
+      <Quote /> */}
 
       <Footer />
     </div>
