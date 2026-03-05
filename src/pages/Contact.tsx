@@ -66,8 +66,8 @@ const Contact = () => {
 
                 <div className="bg-[#D2D2D2] h-px max-[1280px]:hidden block" />
 
-                <div className="flex flex-row max-[1280px]:flex-col gap-[23px] max-[1280px]:gap-[16px]">
-                  <div className="flex flex-row gap-3 justify-center max-[1280px]:justify-start items-center">
+                <div className="flex flex-row flex-wrap max-[1280px]:flex-col gap-[16px] max-[1280px]:gap-[16px]">
+                  <div className="flex flex-row gap-3 justify-center max-[1280px]:justify-start items-center max-w-[200px] max-[1280px]:max-w-full">
                     <div className="bg-[#E649491A] rounded-[12px] p-[11px] h-[42px] w-[42px]">
                       <svg
                         width="20"
