@@ -1349,8 +1349,8 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-      {/* <Testimonials />
-      <Quote /> */}
+      <Testimonials />
+      <Quote />
 
       <Footer />
     </div>
