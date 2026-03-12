@@ -37,10 +37,11 @@ export default function Hero() {
         }}
       />
       <div
-        className="w-full max-[1280px]:text-center h-[340px] max-[1280px]:h-fit absolute font-black text-[#FFFFFF14] whitespace-nowrap bottom-[90px] max-[768px]:bottom-[44px] max-[1280px]:bottom-[-14px] left-0"
+        className="absolute inset-x-0 bottom-0 w-full text-center font-black text-[#FFFFFF14] whitespace-nowrap pointer-events-none select-none"
         style={{
           fontFamily: "'Raleway', sans-serif",
           fontSize: "18vw",
+          lineHeight: "0.8",
         }}
       >
         DK EXPRESS
